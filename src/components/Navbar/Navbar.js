@@ -1,4 +1,7 @@
 import React from "react";
+import "./Navbar.css";
+
+// ------- ICONS --------
 import { CartWidget } from "../index";
 import { AiOutlineSearch } from "react-icons/ai";
 
@@ -7,14 +10,16 @@ const Navbar = () => {
     <div className="navbar-container">
       <div className="logo-container">
         <h1 className="logo">
-          <a href="/">Ars Nova</a>
+          <a href="/" id="logo">
+            Ars Nova
+          </a>
         </h1>
       </div>
       <div className="searchbar-container">
-        <input className="searchbar" placeholder="The quest for meaning." />
+        <input type="search" className="searchbar" placeholder="The quest for meaning." />
         <AiOutlineSearch className="search-icon" />
       </div>
-      <ul>
+      <ul style={{ listStyle: "none" }} className="navbar-list-container">
         <li className="navbar-explore">
           <a href="/">Explore</a>
         </li>
