@@ -19,7 +19,11 @@ const ItemListContainer = (props) => {
           to see more.
         </h3>
       </div>
-      <img src={characterImage} className="character-image" alt="charcter-image"></img>
+      <img
+        src={characterImage}
+        className="character-image"
+        alt="charcter-image"
+      ></img>
     </div>
   );
 };
