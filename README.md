@@ -1,10 +1,14 @@
 ## <strong>Ars Nova</strong> :herb:
 
+<br/>
+
 ### Antique NFTs Marketplace, done by Félix Hernández Vieyra
 
 - :rocket: Sell your antique botanical illustrations NFTs
 - 🖥️ Connect with other nifty-mad men around the world
 - :zap: Join us, dearest and make profits out of your art!
+
+<br/>
 
 ## Who am I? 🔎
 
@@ -25,6 +29,8 @@ I'm a student from the React.js course taught at <strong>[Coderhouse]</strong>, 
   <br/>
 
 </details>
+
+<br/>
 
 ## What I aim to do 📌
 
@@ -49,6 +55,10 @@ Don't tell anyone, but here's a tiny preview of the actual state of the project:
 <br/>
 
 <img width="75%" src="https://i.imgur.com/Xb3A1Lq.png?1" align="center" alt="Ars-nova-preview" />
+
+<br/>
+
+### See you soon! :rocket::rocket::rocket:
 
 <!-- Felix links -->
 
