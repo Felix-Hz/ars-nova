@@ -1,5 +1,7 @@
+@import "./Pallette.css";
+
 /*-------------------------------------------------------------------------------- \
-|                                    WEB STYLING                                   |
+|                               WEB GENERAL STYLING                                |
 \-------------------------------------------------------------------------------- */
 
 * {
@@ -7,10 +9,22 @@
   margin: 0;
   max-width: 100vw;
   font-family: "Montserrat", sans-serif;
+  color: var(--black);
+}
+
+.app {
+  background-color: var(--white);
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overflow: hidden;
 }
 
 html {
   line-height: 1.75;
+}
+
+ul {
+  padding-inline-start: 0;
 }
 
 a {
@@ -23,6 +37,12 @@ a:active {
   color: inherit;
 }
 
-ul {
-  padding-inline-start: 0;
+input:focus,
+button:focus {
+  outline: none;
 }
+
+/*-------------------------------------------------------------------------------- \
+|                                 SPECIFIC STYLING                                 |
+\-------------------------------------------------------------------------------- */
+

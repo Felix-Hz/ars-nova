@@ -1,11 +1,6 @@
-import './App.css';
+import "./App.css";
 
-import {
-  Navbar,
-  ItemListContainer,
-  Footer
-} from "./components/index";
-
+import { Navbar, ItemListContainer, Footer } from "./components/index";
 
 function App() {
   return (

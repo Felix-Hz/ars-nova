@@ -1,3 +1,9 @@
+@import "../../Pallette.css";
+
+/*-------------------------------------------------------------------------------- \
+|                                 NAVBAR STYLING                                   |
+\-------------------------------------------------------------------------------- */
+
 .navbar-container {
   display: flex;
   flex-direction: row;
@@ -32,4 +38,11 @@
   align-content: center;
   gap: 70px;
   padding: 10px;
+  font-size: small;
+}
+
+.navbar-wallet {
+  background-color: var(--lime);
+  border-radius: 25px;
+  padding: 6px;
 }

@@ -24,7 +24,7 @@ const Navbar = () => {
           <a href="/">Explore</a>
         </li>
         <li className="navbar-wallet">
-          <a href="/">Connect Walllet</a>
+          <a href="/">Connect Wallet</a>
         </li>
         <li className="navbar-cart">
           <a href="/">

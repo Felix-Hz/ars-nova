@@ -1,0 +1,22 @@
+@import "../../Pallette.css";
+
+/*-------------------------------------------------------------------------------- \
+|                                 NAVBAR STYLING                                   |
+\-------------------------------------------------------------------------------- */
+
+.item-list-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  padding: 80px;
+}
+
+.character-image {
+  max-height: 650px;
+}
+
+.greeting {
+  font-family: "Caudex", serif;
+  font-size: 85px;
+}
