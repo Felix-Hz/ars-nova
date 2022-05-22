@@ -58,7 +58,7 @@ Don't tell anyone, but here's a tiny preview of the actual state of the project:
 
 <br/>
 
-### See you soon! :rocket::rocket::rocket:
+#### See you soon! :rocket::rocket::rocket:
 
 <!-- Felix links -->
 
