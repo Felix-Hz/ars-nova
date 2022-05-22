@@ -1,7 +1,7 @@
 @import "../../Pallette.css";
 
 /*-------------------------------------------------------------------------------- \
-|                                 NAVBAR STYLING                                   |
+|                               ITEM LIST STYLING                                  |
 \-------------------------------------------------------------------------------- */
 
 .item-list-container {
@@ -19,4 +19,14 @@
 .greeting {
   font-family: "Caudex", serif;
   font-size: 85px;
+}
+
+.subtitle {
+  font-size: 35px;
+  font-weight: 400;
+}
+
+.ricks:hover:hover {
+  color: var(--lime);
+  font-weight: 800;
 }
