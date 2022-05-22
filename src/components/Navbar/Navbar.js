@@ -14,13 +14,19 @@ const Navbar = () => {
         <input className="searchbar" placeholder="The quest for meaning." />
         <AiOutlineSearch className="search-icon" />
       </div>
-      <h3 className="navbar-explore">
-        <a href="/">Explore</a>
-      </h3>
-      <h3 className="navbar-wallet">
-        <a href="/">Connect Walllet</a>
-      </h3>
-      <CartWidget />
+      <ul>
+        <li className="navbar-explore">
+          <a href="/">Explore</a>
+        </li>
+        <li className="navbar-wallet">
+          <a href="/">Connect Walllet</a>
+        </li>
+        <li className="navbar-cart">
+          <a href="/">
+            <CartWidget />
+          </a>
+        </li>
+      </ul>
     </div>
   );
 };
