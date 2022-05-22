@@ -4,8 +4,8 @@
 
 ### Antique NFTs Marketplace, done by Félix Hernández Vieyra
 
-- :rocket: Sell your antique botanical illustrations NFTs
-- 🖥️ Connect with other nifty-mad men around the world
+- :rocket: Sell your antique botanical illustrations NFTs.
+- 🖥️ Connect with other nifty-mad men around the world.
 - :zap: Join us, dearest and make profits out of your art!
 
 <br/>
@@ -42,11 +42,11 @@ You can find more information [here](https://www.youtube.com/watch?v=mCdA4bJAGGk
 
 ## Reference sites 📃
 
-- <strong>[OpenSea](https://opensea.io/)</strong>: One of the most known and used NFT marketplaces out there, that achieves great complexity with a minimalistic UI
+- <strong>[OpenSea](https://opensea.io/)</strong>: Achieves great complexity with a minimalistic UI.
 
-- <strong>[SuperRare](https://superrare.com/)</strong>: A product that networks sellers and nifities-seekers in an artistic fashion
+- <strong>[SuperRare](https://superrare.com/)</strong>: A product that networks sellers and nifities-seekers in an artistic fashion.
 
-- <strong>[Verel](https://vercel.com/)</strong>: Industry standard, minimal design and practices.
+- <strong>[Vercel](https://vercel.com/)</strong>: Industry standard, minimal design and practices.
 
 <br/>
 
@@ -58,7 +58,7 @@ Don't tell anyone, but here's a tiny preview of the actual state of the project:
 
 <br/>
 
-#### See you soon! :rocket::rocket::rocket:
+I'll be seeing you soon! :rocket::rocket::rocket:
 
 <!-- Felix links -->
 
