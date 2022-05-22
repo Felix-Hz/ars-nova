@@ -1,4 +1,6 @@
 import React from "react";
+
+// ------- CSS --------
 import "./Navbar.css";
 
 // ------- ICONS --------
@@ -16,7 +18,11 @@ const Navbar = () => {
         </h1>
       </div>
       <div className="searchbar-container">
-        <input type="search" className="searchbar" placeholder="The quest for meaning." />
+        <input
+          type="search"
+          className="searchbar"
+          placeholder="The quest for meaning."
+        />
         <AiOutlineSearch className="search-icon" />
       </div>
       <ul style={{ listStyle: "none" }} className="navbar-list-container">

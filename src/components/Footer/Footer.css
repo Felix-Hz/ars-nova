@@ -5,28 +5,30 @@
 \-------------------------------------------------------------------------------- */
 
 .footer-container {
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
-    align-items: center;
-    padding: 25px;
-    background: var(--black);
-    color: var(--white);
-    bottom: 0;
-    position: fixed;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding: 25px;
+  background: var(--black);
+  color: var(--white);
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-text-container {
-    font-size: smaller;
+  font-size: smaller;
+}
 
+.footer-text {
+  font-weight: 400;
 }
 
 .footer-triangle-container {
-    -webkit-transform: rotate(14deg);
+  -webkit-transform: rotate(14deg);
 }
 
-.social-icons-container{
-    display: flex;
-    gap: 50px;
+.social-icons-container {
+  display: flex;
+  gap: 50px;
 }

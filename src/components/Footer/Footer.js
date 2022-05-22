@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <div className="footer-container">
       <div className="footer-text-container">
-        <h4>Ars Nova was made with ⚡ and 💙 by Félix </h4>
+        <h4 className="footer-text">Ars Nova was made with ⚡ and 💙 by Félix </h4>
       </div>
       <div className="footer-triangle-container">
         <GiMoebiusTriangle size={8} />

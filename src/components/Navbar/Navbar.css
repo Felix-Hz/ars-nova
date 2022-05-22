@@ -10,6 +10,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
+  font-weight: 500;
 }
 
 #logo {
@@ -20,7 +21,7 @@
   border-radius: 15px;
   width: 450px;
   height: 30px;
-  padding: 8px;
+  padding: 7px;
   border: solid 0.1px;
 }
 
@@ -44,5 +45,5 @@
 .navbar-wallet {
   background-color: var(--lime);
   border-radius: 25px;
-  padding: 6px;
+  padding: 8px;
 }
