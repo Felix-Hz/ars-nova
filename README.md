@@ -6,23 +6,23 @@
 - 🖥️ Connect with other nifty-mad men around the world
 - :zap: Join us, dearest and make profits out of your art!
 
-<br/>
-
 ## Who am I? 🔎
 
-I'm a student from the React.js course taught at <strong>[Coderhouse]</strong>, that loves playing around with old stuff.
+I'm a student from the React.js course taught at <strong>[Coderhouse]</strong>, who loves playing around with old stuff.
 
 <br/>
 
 <details>
   <summary>:octocat: More about me</summary>
   <br/>
-  Well, hey there! I'm a 23 years old psychology student, pursuing a career as a Front-end Developer. Mediocre musician, data lover and professional progressive rock listener. The real embodiment of a Jack of all trades, but master of none!
+  Well, hey there! I'm a 23 years old code apprentice, pursuing a career as a Front-end Developer. Advanced Psychology student, mediocre musician, data lover and progressive rock fan. The real embodiment of a Jack of all trades, but master of none.
   <br/>
   <br/>
   
   [<img align="left" alt="LinkedIn Félix" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/>][linkedinfelix]
   [<img align="left" alt="GitHub logo" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg"/>][githubfelix]
+
+  <br/>
 
 </details>
 
@@ -44,7 +44,7 @@ You can find more information [here](https://www.youtube.com/watch?v=mCdA4bJAGGk
 
 <br/>
 
-Don't tell anyone, but here's a tiny preview:
+Don't tell anyone, but here's a tiny preview of the actual state of the project:
 
 <br/>
 
