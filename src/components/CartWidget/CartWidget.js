@@ -4,9 +4,9 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 const CartWidget = () => {
   return (
     <div>
-      <h2>
+      <i>
         <AiOutlineShoppingCart />
-      </h2>
+      </i>
     </div>
   );
 };
