@@ -1,12 +1,15 @@
 import "./App.css";
 
-import { Navbar, ItemListContainer, Footer } from "./components/index";
+import { Navbar, Landing, Footer, Landing } from "./components/index";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <ItemListContainer greeting={"Be Welcomed, Foreigner."} subtitle={"The journey is about to begin."}/>
+      <Landing
+        greeting={"Be Welcomed, Foreigner."}
+        subtitle={"The journey is about to begin."}
+      />
       <Footer />
     </div>
   );

@@ -1,8 +1,8 @@
 import React from "react";
 import characterImage from "../../images/landing.png";
-import "./ItemListContainer.css";
+import "./Landing.css";
 
-const ItemListContainer = (props) => {
+const Landing = (props) => {
   return (
     <div className="item-list-container">
       <div>
@@ -28,4 +28,4 @@ const ItemListContainer = (props) => {
   );
 };
 
-export default ItemListContainer;
+export default Landing;
