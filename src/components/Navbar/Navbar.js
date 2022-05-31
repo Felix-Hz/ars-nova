@@ -1,20 +1,22 @@
+// ------- IMPORTS --------
 import React from "react";
+import { Link } from "react-router-dom";
 
 // ------- CSS --------
 import "./Navbar.css";
 
 // ------- ICONS --------
 import { CartWidget } from "../index";
-import { AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineSearch, AiOutlineShoppingCart } from "react-icons/ai";
 
 const Navbar = () => {
   return (
     <div className="navbar-container">
       <div className="logo-container">
         <h1 className="logo">
-          <a href="/" id="logo">
+          <Link to="/" id="logo">
             Ars Nova
-          </a>
+          </Link>
         </h1>
       </div>
       <div className="searchbar-container">
@@ -27,15 +29,15 @@ const Navbar = () => {
       </div>
       <ul style={{ listStyle: "none" }} className="navbar-list-container">
         <li className="navbar-explore">
-          <a href="/">Explore</a>
+          <Link to="/shop">Explore</Link>
         </li>
         <li className="navbar-wallet">
-          <a href="/">Connect Wallet</a>
+          <Link to="/">Connect Wallet</Link>
         </li>
         <li className="navbar-cart">
-          <a href="/">
-            <CartWidget />
-          </a>
+          <Link to="/cart">
+            <AiOutlineShoppingCart size={24} />
+          </Link>
         </li>
       </ul>
     </div>
