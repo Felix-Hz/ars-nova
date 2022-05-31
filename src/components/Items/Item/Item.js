@@ -1,13 +1,20 @@
-// --------  IMPORTS -------- 
-import React from 'react'
+// --------  IMPORTS --------
+import React from "react";
 
-// -------- CSS IMPORTS -------- 
-import './Item.css';
+// -------- CSS IMPORTS --------
+import "./Item.css";
 
-const Item = () => {
+const Item = ({ name, img, price }) => {
+  console.log(name);
+
   return (
-    <div>Item</div>
-  )
-}
+    <div>
+      <img src={`../../${img}`} />
+      {name}
+      {price}
+      <br />
+    </div>
+  );
+};
 
-export default Item
+export default Item;

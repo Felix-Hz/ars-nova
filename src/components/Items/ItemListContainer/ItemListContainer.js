@@ -1,22 +1,24 @@
 // -------- IMPORTS --------
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { listProducts } from "../../../data/ProductsDB";
+import { ItemList } from "../../index";
 
 // -------- CSS IMPORTS --------
 import "./ItemListContainer.css";
 
 const ItemListContainer = () => {
-  
-  // after component has been mounted 
+  const [products, setProducts] = useState([]);
+
+  // after component has been mounted
   useEffect(() => {
-    listProducts().then( res => {
-      console.log(res);
-    })
+    listProducts().then((res) => {
+      setProducts(res);
+    });
   }, []);
 
   return (
     <div>
-      <h1>Hola</h1>
+      <ItemList products={products} />
     </div>
   );
 };

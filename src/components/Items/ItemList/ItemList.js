@@ -1,13 +1,20 @@
-// -------- IMPORTS -------- 
-import React from 'react'
+// -------- IMPORTS --------
+import React from "react";
+import { Item } from "../../index";
 
-// -------- CSS IMPORTS -------- 
-import './ItemList.css'
+// -------- CSS IMPORTS --------
+import "./ItemList.css";
 
-const ItemList = () => {
+const ItemList = ({ products }) => {
   return (
-    <div>ItemList</div>
-  )
-}
+    <div>
+      <ul>
+        {products.map((p) => (
+          <Item key={p.id} {...p} />
+        ))}
+      </ul>
+    </div>
+  );
+};
 
-export default ItemList
+export default ItemList;

@@ -18,7 +18,7 @@
 }
 
 .searchbar {
-  border-radius: 15px;
+  border-radius: 8px;
   width: 450px;
   height: 30px;
   padding: 7px;
@@ -44,6 +44,6 @@
 
 .navbar-wallet {
   background-color: var(--lime);
-  border-radius: 25px;
-  padding: 8px;
+  border-radius: 12px;
+  padding: 10px;
 }
