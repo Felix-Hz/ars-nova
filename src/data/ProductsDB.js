@@ -12,10 +12,11 @@ const Products = [
     size: "Small",
     origin: "India",
     price: 0.5,
-    img: "../../images/medieval-fair/helmets/asian-flow.png",
+    img: "helmets/asian-flow.png",
     category: "Helmet",
     description: "",
     stock: 25,
+    rating: 3.5
   },
   {
     id: 2,
@@ -24,10 +25,11 @@ const Products = [
     size: "Large",
     origin: "France",
     price: 0.3,
-    img: "../../images/medieval-fair/helmets/audette_ops.png",
+    img: "helmets/audette_ops.png",
     category: "Helmet",
     description: "",
     stock: 25,
+    rating: 4.5
   },
   {
     id: 3,
@@ -36,10 +38,11 @@ const Products = [
     size: "Medium",
     origin: "England",
     price: 0.7,
-    img: "../../images/medieval-fair/helmets/augusts-helm.png",
+    img: "helmets/augusts-helm.png",
     category: "Helmet",
     description: "",
     stock: 25,
+    rating: 5
   },
   {
     id: 4,
@@ -48,10 +51,11 @@ const Products = [
     size: "Small",
     origin: "Persia",
     price: 1.2,
-    img: "../../images/medieval-fair/helmets/gladiator.png",
+    img: "helmets/gladiator.png",
     category: "Helmet",
     description: "",
     stock: 25,
+    rating: 7
   },
   {
     id: 5,
@@ -60,10 +64,11 @@ const Products = [
     size: "Medium",
     origin: "Spain",
     price: 0.4,
-    img: "../../images/medieval-fair/helmets/gods-dead.png",
+    img: "helmets/gods-dead.png",
     category: "Helmet",
     description: "",
     stock: 25,
+    rating: 4
   },
   {
     id: 6,
@@ -72,10 +77,10 @@ const Products = [
     size: "Small",
     origin: "Portugal",
     price: 1.2,
-    img: "../../images/medieval-fair/helmets/holy-wings.png",
+    img: "helmets/holy-wings.png",
     category: "Helmet",
     description: "",
-    stock: 25,
+    rating: 4.7
   },
   {
     id: 7,
@@ -84,10 +89,11 @@ const Products = [
     size: "X-Large",
     origin: "Spain",
     price: 0.8,
-    img: "../../images/medieval-fair/helmets/horny-king.png",
+    img: "helmets/horny-king.png",
     category: "Helmet",
     description: "",
     stock: 25,
+    rating: 5
   },
   {
     id: 8,
@@ -96,10 +102,11 @@ const Products = [
     size: "Small",
     origin: "Turkey",
     price: 0.5,
-    img: "../../images/medieval-fair/helmets/pigface-bascinet.png",
+    img: "helmets/pigface-bascinet.png",
     category: "Helmet",
     description: "",
     stock: 25,
+    rating: 4.5
   },
   {
     id: 9,
@@ -108,10 +115,11 @@ const Products = [
     size: "Small",
     origin: "Sweden",
     price: 0.4,
-    img: "../../images/medieval-fair/helmets/swift-destroyer.png",
+    img: "helmets/swift-destroyer.png",
     category: "Helmet",
     description: "",
     stock: 25,
+    rating: 5
   },
   {
     id: 10,
@@ -120,10 +128,11 @@ const Products = [
     size: "Large",
     origin: "Turkey",
     price: 1.1,
-    img: "../../images/medieval-fair/helmets/trojan-rise.png",
+    img: "helmets/trojan-rise.png",
     category: "Helmet",
     description: "",
     stock: 25,
+    rating: 4.7
   },
 
   {
@@ -135,7 +144,8 @@ const Products = [
     price: 0.7,
     category: "Battleaxe",
     type: "Swift",
-    img: "../../images/medieval-fair/weapons/battle-axe.png",
+    img: "weapons/battle-axe.png",
+    rating: 4.2
   },
   {
     id: 12,
@@ -146,7 +156,8 @@ const Products = [
     price: 0.4,
     category: "Mace",
     type: "Heavy",
-    img: "../../images/medieval-fair/weapons/christian_mace.png",
+    img: "weapons/christian_mace.png",
+    rating: 4.5
   },
   {
     id: 13,
@@ -157,7 +168,8 @@ const Products = [
     price: 0.7,
     category: "Scimitar",
     type: "Lightweight",
-    img: "../../images/medieval-fair/weapons/scimitar-skinned.png",
+    img: "weapons/scimitar-skinned.png",
+    rating: 3.8
   },
   {
     id: 14,
@@ -168,7 +180,8 @@ const Products = [
     price: 1.2,
     category: "Longsword",
     type: "Heavy",
-    img: "../../images/medieval-fair/weapons/long_sword.png",
+    img: "weapons/long_sword.png",
+    rating: 4.4
   },
   {
     id: 15,
@@ -179,7 +192,8 @@ const Products = [
     price: 0.9,
     category: "Mace",
     type: "Swift",
-    img: "../../images/medieval-fair/weapons/mace.png",
+    img: "weapons/mace.png",
+    rating: 5
   },
   {
     id: 16,
@@ -190,7 +204,8 @@ const Products = [
     price: 0.5,
     category: "Dagger",
     type: "Heavy",
-    img: "../../images/medieval-fair/weapons/royal_dagger.png",
+    img: "weapons/royal_dagger.png",
+    rating: 5
   },
   {
     id: 17,
@@ -201,7 +216,8 @@ const Products = [
     price: 0.9,
     category: "Spear",
     type: "Average",
-    img: "../../images/medieval-fair/weapons/spanish_spear.png",
+    img: "weapons/spanish_spear.png",
+    rating: 3
   },
   {
     id: 18,
@@ -212,7 +228,8 @@ const Products = [
     price: 0.7,
     category: "Spearaxe",
     type: "Swift",
-    img: "../../images/medieval-fair/weapons/spear-axe.png",
+    img: "weapons/spear-axe.png",
+    rating: 3.5
   },
   {
     id: 19,
@@ -223,7 +240,8 @@ const Products = [
     price: 0.6,
     category: "Warhammer",
     type: "Heavy",
-    img: "../../images/medieval-fair/weapons/warhammer.png",
+    img: "weapons/warhammer.png",
+    rating: 5
   },
   {
     id: 20,
@@ -234,7 +252,8 @@ const Products = [
     price: 0.7,
     category: "Spear",
     type: "Swift",
-    img: "../../images/medieval-fair/weapons/swiss-spear.png",
+    img: "weapons/swiss-spear.png",
+    rating: 4
   },
 ];
 

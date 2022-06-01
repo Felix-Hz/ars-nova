@@ -22,7 +22,7 @@ const Landing = (props) => {
       <img
         src={characterImage}
         className="character-image"
-        alt="charcter-image"
+        alt="character-image"
       ></img>
     </div>
   );
