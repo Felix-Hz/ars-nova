@@ -15,11 +15,16 @@
 
 #logo {
   font-family: "Caudex", serif;
+  font-size: 2em;
+}
+
+.searchbar-container {
+  display: flex;
 }
 
 .searchbar {
   border-radius: 8px;
-  width: 450px;
+  width: 520px;
   height: 30px;
   padding: 7px;
   border: solid 0.1px;
@@ -29,7 +34,8 @@
   border: none;
   position: relative;
   left: -25px;
-  height: 12px;
+  top: 5px;
+  height: 20px;
 }
 
 .navbar-list-container {
