@@ -9,6 +9,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  align-content: center;
   padding: 15px 30px;
   font-weight: 500;
 }
@@ -45,7 +46,7 @@
   align-content: center;
   gap: 70px;
   padding: 10px;
-  font-size: small;
+  font-size: 1em;
 }
 
 .navbar-wallet {

@@ -4,7 +4,7 @@ import "./Landing.css";
 
 const Landing = (props) => {
   return (
-    <div className="item-list-container">
+    <div className="landing-container">
       <div>
         <h1 className="greeting">{props.greeting}</h1>
         <h3 className="subtitle">

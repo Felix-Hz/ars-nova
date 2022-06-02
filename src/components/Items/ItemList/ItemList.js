@@ -7,11 +7,13 @@ import "./ItemList.css";
 
 const ItemList = ({ products }) => {
   return (
-    <div>
-      <ul>
-        {products.map((p) => (
-          <Item key={p.id} {...p} />
-        ))}
+    <div className="item-list-container">
+      <ul className="list-container">
+        <li className="item-container">
+          {products.map((p) => (
+            <Item key={p.id} {...p} />
+          ))}
+        </li>
       </ul>
     </div>
   );

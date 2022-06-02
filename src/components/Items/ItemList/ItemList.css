@@ -1,0 +1,24 @@
+@import "../../../Pallette.css";
+
+/*-------------------------------------------------------------------------------- \
+|                               ITEM LIST STYLING                                  |
+\-------------------------------------------------------------------------------- */
+
+.list-container {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.item-container {
+    display: flex;
+    width: 75%;
+    justify-content: space-between;
+}
+
+.css-x5opt7 {
+    display: flex;
+    width: 75%;
+    justify-content: space-between;
+}

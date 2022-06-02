@@ -26,9 +26,7 @@ function Item({ name, img, price, category }) {
         bg={useColorModeValue("white", "gray.800")}
         boxShadow={"2xl"}
         rounded={"lg"}
-        pos={"relative"}
         padding={"35px"}
-        overflow={"auto"}
       >
         <Box rounded={"lg"} pos={"relative"} height={"200px"}>
           <Image
