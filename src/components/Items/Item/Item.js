@@ -32,13 +32,14 @@ function Item({ name, img, price, category }) {
         <Box rounded={"lg"} pos={"relative"} height={"200px"}>
           <Image
             rounded={"lg"}
-            height={70}
+            height="70px"
             width={150}
             objectFit={"scale-down"}
+            marginTop="0"
             src={require(`../../../images/medieval-fair/${img}`)}
           />
         </Box>
-        <Stack pt={2.5} align={"center"}>
+        <Stack pt={2.5} align={"center"} height="inherit">
           <Text color={"gray.500"} fontSize={"sm"} textTransform={"uppercase"}>
             {category}
           </Text>

@@ -1,30 +1,39 @@
 import React from "react";
 import characterImage from "../../images/landing.png";
 import "./Landing.css";
+import { Box, Flex, Heading, Text, Stack, Image, Link } from "@chakra-ui/react";
 
 const Landing = (props) => {
   return (
-    <div className="landing-container">
-      <div>
-        <h1 className="greeting">{props.greeting}</h1>
-        <h3 className="subtitle">
+    <Flex
+      className="landing-container"
+      justifyContent="space-around"
+      alignItems="center"
+      p="80px"
+    >
+      <Box >
+        <Heading as="h1" className="greeting" fontFamily={("Caudex", "serif")} size="4xl">
+          {props.greeting}
+        </Heading>
+        <Heading as="h3" className="subtitle" size="xl" fontWeight="400">
           {props.subtitle} Click{" "}
-          <a
+          <Link
             href="https://www.youtube.com/watch?v=mCdA4bJAGGk"
-            style={{ fontWeight: "600" }}
+            fontWeight="600"
             className="rick-astley"
           >
             here
-          </a>{" "}
+          </Link>{" "}
           to see more.
-        </h3>
-      </div>
-      <img
+        </Heading>
+      </Box>
+      <Image
         src={characterImage}
         className="character-image"
+        maxH="650px"
         alt="character-image"
-      ></img>
-    </div>
+      ></Image>
+    </Flex>
   );
 };
 

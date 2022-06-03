@@ -4,53 +4,6 @@
 |                                 NAVBAR STYLING                                   |
 \-------------------------------------------------------------------------------- */
 
-.navbar-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  padding: 15px 30px;
-  font-weight: 500;
-}
-
 #logo {
   font-family: "Caudex", serif;
-  font-size: 2em;
-}
-
-.searchbar-container {
-  display: flex;
-}
-
-.searchbar {
-  border-radius: 8px;
-  width: 520px;
-  height: 30px;
-  padding: 7px;
-  border: solid 0.1px;
-}
-
-.search-icon {
-  border: none;
-  position: relative;
-  left: -25px;
-  top: 5px;
-  height: 20px;
-}
-
-.navbar-list-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  gap: 70px;
-  padding: 10px;
-  font-size: 1em;
-}
-
-.navbar-wallet {
-  background-color: var(--lime);
-  border-radius: 12px;
-  padding: 10px;
 }

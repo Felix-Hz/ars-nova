@@ -4,27 +4,6 @@
 |                               Landing STYLING                                  |
 \-------------------------------------------------------------------------------- */
 
-.landing-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-  padding: 80px;
-}
-
-.character-image {
-  max-height: 650px;
-}
-
-.greeting {
-  font-family: "Caudex", serif;
-  font-size: 85px;
-}
-
-.subtitle {
-  font-size: 35px;
-  font-weight: 400;
-}
 
 .rick-astley:hover {
   color: var(--lime);
