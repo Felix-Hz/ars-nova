@@ -21,7 +21,8 @@ function Item({ name, img, price, category }) {
       <Box
         role={"group"}
         p={15}
-        maxW={"330px"}
+        maxW={"225px"}
+        maxH={"240px"}
         w={"full"}
         bg={useColorModeValue("white", "gray.800")}
         boxShadow={"2xl"}
@@ -31,8 +32,8 @@ function Item({ name, img, price, category }) {
         <Box rounded={"lg"} pos={"relative"} height={"200px"}>
           <Image
             rounded={"lg"}
-            height={200}
-            width={282}
+            height={50}
+            width={100}
             objectFit={"scale-down"}
             src={require(`../../../images/medieval-fair/${img}`)}
           />

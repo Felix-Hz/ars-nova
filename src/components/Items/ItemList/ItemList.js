@@ -9,11 +9,9 @@ const ItemList = ({ products }) => {
   return (
     <div className="item-list-container">
       <ul className="list-container">
-        <li className="item-container">
           {products.map((p) => (
-            <Item key={p.id} {...p} />
+            <Item className="item-card" key={p.id} {...p} />
           ))}
-        </li>
       </ul>
     </div>
   );
