@@ -32,8 +32,8 @@ function Item({ name, img, price, category }) {
         <Box rounded={"lg"} pos={"relative"} height={"200px"}>
           <Image
             rounded={"lg"}
-            height={50}
-            width={100}
+            height={70}
+            width={150}
             objectFit={"scale-down"}
             src={require(`../../../images/medieval-fair/${img}`)}
           />
@@ -55,7 +55,7 @@ function Item({ name, img, price, category }) {
             <Text fontWeight={800} fontSize={"lg"}>
               {price}
             </Text>
-            <FaEthereum style={{ marginTop: "0 !important" }} />
+            <FaEthereum style={{ marginTop: "0 !important", padding: "0" }} />
           </Stack>
         </Stack>
       </Box>

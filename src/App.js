@@ -3,7 +3,7 @@ import "./App.css";
 import {
   Navbar,
   Landing,
-  Footer, 
+  Footer,
   CartWidget,
   ItemListContainer,
 } from "./components/index";
@@ -34,12 +34,11 @@ function App() {
               <Route exact path="/cart" element={<CartWidget />} />
             </Routes>
           </div>
-          <Footer /> 
+          <Footer />
         </div>
       </ChakraProvider>
     </Router>
   );
-} 
+}
 
 export default App;
- 

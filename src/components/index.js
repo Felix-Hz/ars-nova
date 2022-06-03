@@ -6,3 +6,4 @@ export { default as CartWidget } from "./Navbar/CartWidget/CartWidget";
 export { default as Item } from "./Items/Item/Item";
 export { default as ItemList } from "./Items/ItemList/ItemList";
 export { default as ItemListContainer } from "./Items/ItemListContainer/ItemListContainer";
+export { default as ItemCount } from "./Items/ItemCount/ItemCount";

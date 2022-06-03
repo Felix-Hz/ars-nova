@@ -17,7 +17,7 @@ const ItemListContainer = () => {
   }, []);
 
   return (
-    <div>
+    <div className="item-list-father-container">
       <ItemList products={products} />
     </div>
   );
