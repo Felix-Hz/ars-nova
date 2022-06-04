@@ -43,7 +43,7 @@ function Item({ name, img, price, category }) {
           <Text color={"gray.500"} fontSize={"sm"} textTransform={"uppercase"}>
             {category}
           </Text>
-          <Heading fontSize={"2xl"} fontFamily={"body"} fontWeight={500}>
+          <Heading fontSize={"xl"} fontFamily={"body"} fontWeight={500}>
             {name}
           </Heading>
           <Stack
@@ -53,7 +53,7 @@ function Item({ name, img, price, category }) {
             justifyContent={"space-evenly"}
             alignItems={"center"}
           >
-            <Text fontWeight={800} fontSize={"lg"}>
+            <Text fontWeight={400} fontSize={"md"}>
               {price}
             </Text>
             <FaEthereum style={{ marginTop: "0 !important", padding: "0" }} />

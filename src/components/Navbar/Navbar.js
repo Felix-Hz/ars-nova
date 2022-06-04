@@ -3,12 +3,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import {
   Box,
-  Center,
   Input,
   Heading,
   Text,
   Stack,
-  Image,
   Flex,
   InputGroup,
   InputRightElement,
@@ -65,16 +63,27 @@ const Navbar = () => {
         justifyContent="space-between"
         alignItems="center"
         alignContent="center"
-        gap="70px"
+        gap="30px"
         p="10px"
       >
         <Box className="navbar-explore">
-          <Link to="/shop"><Text fontSize='lg' className="explore-text">Explore</Text></Link>
+          <Link to="/count">
+            <Text fontSize="lg" className="explore-text">
+              Count to Infinity
+            </Text>
+          </Link>
+        </Box>
+        <Box className="navbar-explore">
+          <Link to="/shop">
+            <Text fontSize="lg" className="explore-text">
+              Explore
+            </Text>
+          </Link>
         </Box>
         <Box className="navbar-wallet">
           <Link to="/">
             <Button p="15px" bgColor="#e0ff00">
-            <Text fontSize='md'>Connect to Wallet</Text>
+              <Text fontSize="md">Connect to Wallet</Text>
             </Button>
           </Link>
         </Box>
