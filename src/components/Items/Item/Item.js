@@ -17,7 +17,7 @@ import "./Item.css";
 
 function Item({ name, img, price, category }) {
   return (
-    <Center py={12}>
+    <Center>
       <Box
         role={"group"}
         p={15}
@@ -25,7 +25,7 @@ function Item({ name, img, price, category }) {
         maxH={"240px"}
         w={"full"}
         bg={useColorModeValue("white", "gray.800")}
-        boxShadow={"2xl"}
+        _hover={{boxShadow: "md"}}
         rounded={"lg"}
         padding={"35px"}
       >

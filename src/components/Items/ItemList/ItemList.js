@@ -1,7 +1,7 @@
 // -------- IMPORTS --------
 import React from "react";
-import { Item } from "../../index";
-import { Box, Flex } from "@chakra-ui/react";
+import { Item, RightNav, LeftNav } from "../../index";
+import { Box, Flex, Heading, Text, Divider } from "@chakra-ui/react";
 
 // -------- CSS IMPORTS --------
 import "./ItemList.css";
@@ -11,14 +11,15 @@ const ItemList = ({ products }) => {
     <Flex
       className="item-list-container"
       w="100%"
-      justifyContent="center"
+      justifyContent="space-between"
       alignContent="center"
-      alignItems="center"
+      p="35px 190px"
     >
+      <LeftNav props={{ ...products }} />
       <Flex
         className="list-container"
         overflow="hidden"
-        width="75%"
+        width="50%"
         gap="50px"
         wrap="wrap"
         alignItems="center"
@@ -31,6 +32,7 @@ const ItemList = ({ products }) => {
           <Item className="item-card" key={p.id} {...p} />
         ))}
       </Flex>
+      <RightNav />
     </Flex>
   );
 };
