@@ -13,7 +13,6 @@ import {
   Badge,
 } from "@chakra-ui/react";
 import "./ItemCount.css";
-import "./Button/Button";
 import { MinusIcon, AddIcon, RepeatIcon } from "@chakra-ui/icons";
 
 const ItemCount = ({ initial }) => {
