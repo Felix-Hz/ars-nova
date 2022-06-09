@@ -4,7 +4,7 @@ import { Flex, Heading, Text, Divider } from "@chakra-ui/react";
 const RightNav = () => {
   return (
     <Flex direction="column" w="10%">
-      <Flex direction="column" gap="4px">
+      <Flex direction="column" gap="8px">
         <Heading as="h3" size="md">
           Relevance
         </Heading>

@@ -1,7 +1,7 @@
 import React from "react";
 import characterImage from "../../images/landing.png";
 import "./Landing.css";
-import { Box, Flex, Heading, Text, Stack, Image, Link } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Link } from "@chakra-ui/react";
 
 const Landing = (props) => {
   return (
@@ -11,8 +11,13 @@ const Landing = (props) => {
       alignItems="center"
       p="80px"
     >
-      <Box >
-        <Heading as="h1" className="greeting" fontFamily={("Caudex", "serif")} size="4xl">
+      <Box>
+        <Heading
+          as="h1"
+          className="greeting"
+          fontFamily={("Caudex", "serif")}
+          size="4xl"
+        >
           {props.greeting}
         </Heading>
         <Heading as="h3" className="subtitle" size="xl" fontWeight="400">

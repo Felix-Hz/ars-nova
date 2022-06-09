@@ -1,7 +1,6 @@
 // -------- IMPORTS --------
 import React, { useEffect, useState } from "react";
-import { listProducts } from "../../../data/ProductsDB";
-import { ItemList } from "../../index";
+import { ItemList, listProducts } from "../../index";
 
 // -------- CSS IMPORTS --------
 import "./ItemListContainer.css";

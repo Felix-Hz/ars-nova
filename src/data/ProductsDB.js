@@ -14,7 +14,7 @@ const Products = [
     price: 0.5,
     img: "helmets/asian-flow.png",
     category: "Helmet",
-    description: "",
+    description: "Favoured among combat pures for being the lowest level headgear to offer a great defense.",
     stock: 25,
     rating: 3.5
   },
@@ -27,7 +27,7 @@ const Products = [
     price: 0.3,
     img: "helmets/audette_ops.png",
     category: "Helmet",
-    description: "",
+    description: "The metal purity that characterizes French defense gear.",
     stock: 25,
     rating: 4.5
   },
@@ -40,20 +40,20 @@ const Products = [
     price: 0.7,
     img: "helmets/augusts-helm.png",
     category: "Helmet",
-    description: "",
+    description: "There's a long tradition within the mystical traditions to carry the Augustus force with them.",
     stock: 25,
     rating: 5
   },
   {
     id: 4,
     type: "Helmets",
-    name: "Asian Flow",
+    name: "Persian Gladiator",
     size: "Small",
     origin: "Persia",
     price: 1.2,
     img: "helmets/gladiator.png",
     category: "Helmet",
-    description: "",
+    description: "For real warriors.",
     stock: 25,
     rating: 7
   },
@@ -66,7 +66,7 @@ const Products = [
     price: 0.4,
     img: "helmets/gods-dead.png",
     category: "Helmet",
-    description: "",
+    description: "Provocative, and full scope defense gear.",
     stock: 25,
     rating: 4
   },
@@ -79,7 +79,7 @@ const Products = [
     price: 1.2,
     img: "helmets/holy-wings.png",
     category: "Helmet",
-    description: "",
+    description: "Stylish gear for brave fighters.",
     rating: 4.7
   },
   {
@@ -91,7 +91,7 @@ const Products = [
     price: 0.8,
     img: "helmets/horny-king.png",
     category: "Helmet",
-    description: "",
+    description: "The Horny King was designed in special days. No further comment.",
     stock: 25,
     rating: 5
   },
@@ -104,7 +104,7 @@ const Products = [
     price: 0.5,
     img: "helmets/pigface-bascinet.png",
     category: "Helmet",
-    description: "",
+    description: "Strong metals that can only be wield by the strongest.",
     stock: 25,
     rating: 4.5
   },
@@ -261,6 +261,14 @@ export const listProducts = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(Products);
-    }, 2000);
+    }, 500);
+  });
+};
+
+export const getProduct = (id) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(Products.find(p => p.id === id));
+    }, 500);
   });
 };

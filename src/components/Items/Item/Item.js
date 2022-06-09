@@ -17,7 +17,7 @@ import "./Item.css";
 
 function Item({ name, img, price, category }) {
   return (
-    <Center>
+    <Center h="auto">
       <Box
         role={"group"}
         p={15}
@@ -25,7 +25,7 @@ function Item({ name, img, price, category }) {
         maxH={"240px"}
         w={"full"}
         bg={useColorModeValue("white", "gray.800")}
-        _hover={{boxShadow: "md"}}
+        _hover={{ boxShadow: "md" }}
         rounded={"lg"}
         padding={"35px"}
       >
@@ -43,7 +43,7 @@ function Item({ name, img, price, category }) {
           <Text color={"gray.500"} fontSize={"sm"} textTransform={"uppercase"}>
             {category}
           </Text>
-          <Heading fontSize={"xl"} fontFamily={"body"} fontWeight={500}>
+          <Heading fontSize={"xl"} fontFamily={"body"} fontWeight={500} textAlign={"center"}>
             {name}
           </Heading>
           <Stack

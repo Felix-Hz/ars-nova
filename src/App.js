@@ -6,7 +6,8 @@ import {
   Footer,
   CartWidget,
   ItemListContainer,
-  ItemCount
+  ItemCount,
+  ItemDetailContainer
 } from "./components/index";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
@@ -36,6 +37,7 @@ function App() {
               <Route exact path="/cart" element={<CartWidget />} />
             </Routes>
           </div>
+          <ItemDetailContainer />
           <Footer />
         </div>
       </ChakraProvider>

@@ -4,7 +4,7 @@ import { Flex, Heading, Text, Divider, Box } from "@chakra-ui/react";
 const LeftNav = ({ props }) => {
   return (
     <Flex direction="column" gap="25px" w="10%">
-      <Flex direction="column" gap="4px">
+      <Flex direction="column" gap="8px">
         <Heading as="h3" size="md">
           Categories
         </Heading>
@@ -24,7 +24,7 @@ const LeftNav = ({ props }) => {
         <Text>Food</Text>
         <Divider />
       </Flex>
-      <Flex direction="column" gap="4px">
+      <Flex direction="column" gap="8px">
         <Heading as="h3" size="md">
           Programming languages
         </Heading>
