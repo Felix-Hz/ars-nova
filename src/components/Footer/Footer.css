@@ -12,8 +12,10 @@
   padding: 25px;
   background: var(--black);
   color: var(--white);
-  bottom: 0;
   width: 100%;
+  /* position: absolute; */
+  /* z-index: 999; */
+  bottom: 0;
 }
 
 .footer-text-container {
