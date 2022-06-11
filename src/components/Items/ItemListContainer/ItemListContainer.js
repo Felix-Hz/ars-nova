@@ -1,6 +1,7 @@
 // -------- IMPORTS --------
 import React, { useEffect, useState } from "react";
 import { ItemList, listProducts } from "../../index";
+import { Box } from "@chakra-ui/react";
 
 // -------- CSS IMPORTS --------
 import "./ItemListContainer.css";
@@ -16,9 +17,9 @@ const ItemListContainer = () => {
   }, []);
 
   return (
-    <div className="item-list-father-container">
+    <Box className="item-list-father-container">
       <ItemList products={products} />
-    </div>
+    </Box>
   );
 };
 

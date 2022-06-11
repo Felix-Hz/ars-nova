@@ -1,7 +1,8 @@
 import React from "react";
 import { Flex, Heading, Text, Divider, Box } from "@chakra-ui/react";
 
-const LeftNav = ({ props }) => {
+const LeftNav = ({ products }) => {
+  console.log(products)
   return (
     <Flex direction="column" gap="25px" w="10%">
       <Flex direction="column" gap="8px">
@@ -9,7 +10,7 @@ const LeftNav = ({ props }) => {
           Categories
         </Heading>
         <Divider />
-        {/* {props.map((i) => {
+        {/* {products.map((i) => {
           <Box>
             <Text>{i.type}</Text>
             <Divider />

@@ -7,6 +7,7 @@ import { Flex, Grid, GridItem } from "@chakra-ui/react";
 import "./ItemList.css";
 
 const ItemList = ({ products }) => {
+  console.log(products)
   return (
     <Flex
       className="item-list-container"
@@ -16,7 +17,7 @@ const ItemList = ({ products }) => {
       alignContent="center"
       p="2% 18%"
     >
-      <LeftNav props={{ ...products }} />
+      <LeftNav {...products} />
       <Grid
         templateColumns="1fr 1fr 1fr 1fr"
         gap="6px"

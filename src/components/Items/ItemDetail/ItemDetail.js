@@ -1,9 +1,32 @@
-import React from 'react'
+import React from "react";
+import {
+  Box,
+  Center,
+  useColorModeValue,
+  Heading,
+  Text,
+  Stack,
+  Image,
+} from "@chakra-ui/react";
 
-const ItemDetail = () => {
+const ItemDetail = ({
+  id,
+  name,
+  description,
+  category,
+  origin,
+  price,
+  size,
+  rating,
+  img,
+}) => {
   return (
-    <div></div>
-  )
-}
+    <Box>
+      <Heading>Detalle</Heading>
+      {name}
+      <Image src={img} />
+    </Box>
+  );
+};
 
-export default ItemDetail
+export default ItemDetail;

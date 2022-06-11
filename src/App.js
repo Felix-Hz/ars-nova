@@ -7,20 +7,23 @@ import {
   CartWidget,
   ItemListContainer,
   ItemCount,
-  ItemDetailContainer
+  ItemDetailContainer,
 } from "./components/index";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, Box } from "@chakra-ui/react";
+import { useState } from "react";
 
 /* ------------------------------------------------------------ */
 
 function App() {
+  const [page, setPage] = useState("list");
+
   return (
     <Router>
       <ChakraProvider>
-        <div className="App">
+        <Box className="App">
           <Navbar />
-          <div className="routes">
+          <Box className="routes">
             <Routes>
               <Route
                 exact
@@ -35,11 +38,11 @@ function App() {
               <Route exact path="/shop" element={<ItemListContainer />} />
               <Route exact path="/count" element={<ItemCount initial={0} />} />
               <Route exact path="/cart" element={<CartWidget />} />
+              <Route exact path="/item/:itemId" element={<ItemDetailContainer />} />
             </Routes>
-          </div>
-          <ItemDetailContainer />
+          </Box>
           <Footer />
-        </div>
+        </Box>
       </ChakraProvider>
     </Router>
   );
