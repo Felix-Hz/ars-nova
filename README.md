@@ -54,7 +54,7 @@ Don't tell anyone, but here's a tiny preview of the actual state of the project:
 
 <br/>
 
-![]()
+![Ars Nova](https://github.com/Felix-Hz/ars-nova/blob/master/ars-nova.gif)
 
 <br/>
 
