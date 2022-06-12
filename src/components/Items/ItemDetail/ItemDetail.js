@@ -95,6 +95,7 @@ const ItemDetail = ({
             >
               {name}
             </Heading>
+
             <Stack
               display={"flex"}
               flexDirection={"row"}
@@ -109,6 +110,7 @@ const ItemDetail = ({
                 />
               </Badge>
             </Stack>
+            <Divider />
           </Flex>
           <Box align="center">
             <Rating rating={rating} />
@@ -142,8 +144,8 @@ const ItemDetail = ({
         </Box>
         <Flex justifyContent="space-evenly" w="30%">
           <Avatar
-            name={faker.name.findName()}
-            src={faker.internet.avatar()}
+            name={fakeName}
+            src={faker.internet.avatar(fakeName)}
           ></Avatar>
           <Flex direction="column" gap="4px">
             <Heading as="h2" size="md">
