@@ -18,8 +18,7 @@ import "./Item.css";
 
 function Item({ id, name, img, price, category }) {
   return (
-    // 03:04:30 
-    <Link to="/item/:itemId">
+    <Link to={`/item/${id}`}>
       <Center h="auto">
         <Box
           role={"group"}

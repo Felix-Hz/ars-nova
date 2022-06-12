@@ -7,7 +7,6 @@ import { Flex, Grid, GridItem } from "@chakra-ui/react";
 import "./ItemList.css";
 
 const ItemList = ({ products }) => {
-  console.log(products)
   return (
     <Flex
       className="item-list-container"

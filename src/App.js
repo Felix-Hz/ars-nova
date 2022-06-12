@@ -36,9 +36,18 @@ function App() {
                 }
               />
               <Route exact path="/shop" element={<ItemListContainer />} />
+              <Route
+                exact
+                path="/category/:type"
+                element={<ItemListContainer />}
+              />
               <Route exact path="/count" element={<ItemCount initial={0} />} />
               <Route exact path="/cart" element={<CartWidget />} />
-              <Route exact path="/item/:itemId" element={<ItemDetailContainer />} />
+              <Route
+                exact
+                path="/item/:itemId"
+                element={<ItemDetailContainer />}
+              />
             </Routes>
           </Box>
           <Footer />

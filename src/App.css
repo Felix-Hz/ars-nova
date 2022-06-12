@@ -12,6 +12,15 @@
   font-family: "Montserrat", sans-serif;
 }
 
+html,body {
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  line-height: 1.75;
+}
+
 .app {
   background-color: var(--white);
   scroll-behavior: smooth;
@@ -19,10 +28,6 @@
   overflow: hidden;
   height: 100%;
   width: 100%;
-}
-
-html {
-  line-height: 1.75;
 }
 
 ul {

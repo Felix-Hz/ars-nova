@@ -10,6 +10,7 @@ const Landing = (props) => {
       justifyContent="space-around"
       alignItems="center"
       p="80px"
+      mb="10px"
     >
       <Box>
         <Heading

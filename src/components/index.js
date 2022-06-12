@@ -17,4 +17,4 @@ export { default as LeftNav } from "./Items/ItemList/LeftNav/LeftNav";
 export { default as RightNav } from "./Items/ItemList/RightNav/RightNav";
 
 // DATA
-export { listProducts, getProduct } from "../data/ProductsDB";
+export { listProducts, getProduct, productType } from "../data/ProductsDB";

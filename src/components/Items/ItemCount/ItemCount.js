@@ -35,7 +35,7 @@ const ItemCount = ({ initial }) => {
   };
 
   return (
-    <Stack p="300px" direction={["column"]} alignItems="center" spacing="50px">
+    <Stack p="180px" mb="130px" direction={["column"]} alignItems="center" spacing="50px">
       <Heading as="h3">Count until your brain comes out.</Heading>
       <Flex alignItems="center" alignContent="center" gap="10px">
         <Button

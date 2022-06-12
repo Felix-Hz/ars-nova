@@ -1,20 +1,57 @@
 // -------- IMPORTS --------
 import React, { useEffect, useState } from "react";
-import { ItemList, listProducts } from "../../index";
-import { Box } from "@chakra-ui/react";
+import { ItemList, listProducts, productType } from "../../index";
+import { Box, Heading, Spinner, Flex } from "@chakra-ui/react";
+import { useParams } from "react-router-dom";
 
 // -------- CSS IMPORTS --------
 import "./ItemListContainer.css";
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const { type } = useParams();
 
   // after component has been mounted
   useEffect(() => {
-    listProducts().then((res) => {
-      setProducts(res);
-    });
-  }, []);
+    setLoading(true);
+
+    if (!type) {
+      listProducts()
+        .then((res) => {
+          setProducts(res);
+        })
+        .catch((e) => {
+          console.log(e);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+    } else {
+      productType(type)
+        .then((res) => {
+          setProducts(res);
+        })
+        .catch((e) => {
+          console.log(e);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+    }
+  }, [type]);
+
+  if (loading) {
+    return (
+      <Box p="370px" textAlign="center">
+        <Spinner thickness="5px" speed="0.65s" size="xl" marginBottom="20px" />
+        <Heading as="h2" size="md">
+          Loading
+        </Heading>
+      </Box>
+    );
+  }
 
   return (
     <Box className="item-list-father-container">

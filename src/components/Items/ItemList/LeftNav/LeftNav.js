@@ -1,8 +1,8 @@
 import React from "react";
 import { Flex, Heading, Text, Divider, Box } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const LeftNav = ({ products }) => {
-  console.log(products)
   return (
     <Flex direction="column" gap="25px" w="10%">
       <Flex direction="column" gap="8px">
@@ -16,27 +16,26 @@ const LeftNav = ({ products }) => {
             <Divider />
           </Box>;
         })} */}
-        <Text>Weapons</Text>
+        <Link to="/category/weapons">Weapons</Link>
         <Divider />
-        <Text>Tools</Text>
+        <Link to="/category/helmets">Helmets</Link>
         <Divider />
-        <Text>Leather</Text>
+        <Link to="/shop">All products</Link>
         <Divider />
-        <Text>Food</Text>
-        <Divider />
+
       </Flex>
       <Flex direction="column" gap="8px">
         <Heading as="h3" size="md">
           Programming languages
         </Heading>
         <Divider />
-        <Text>JavaScript</Text>
+        <Link to="https://www.javascript.com/">JavaScript</Link>
         <Divider />
-        <Text>Solidity</Text>
+        <Link to="https://solidity-es.readthedocs.io/es/latest/">Solidity</Link>
         <Divider />
-        <Text>Rust</Text>
+        <Link to="https://www.rust-lang.org/es">Rust</Link>
         <Divider />
-        <Text>Python</Text>
+        <Link to="https://www.python.org/">Python</Link>
         <Divider />
       </Flex>
     </Flex>
