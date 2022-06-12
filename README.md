@@ -54,17 +54,19 @@ Don't tell anyone, but here's a tiny preview of the actual state of the project:
 
 <br/>
 
-<img width="75%" src="https://imgur.com/Xb3A1Lq" align="center" alt="Ars-nova-preview" />
+![]()
 
 <br/>
 
 ## Installation and Setup Instructions
 
-> Clone down this repository. You will need node and npm installed globally on your machine. The packages that were used in this project are:
-> - @chakra-ui/react
-> - @react-router-dom
-> - @faker-js/faker
-> - @react-icons
+Clone down this repository. You will need `node` and `npm` installed globally on your machine. 
+
+> The packages that were used in this project are:
+> - @chakra-ui/react: component library
+> - @react-router-dom: react routing
+> - @faker-js/faker: fake user info such as avatars, names and emails
+> - @react-icons: standard icon libraries
 
 
 ### Installation:
