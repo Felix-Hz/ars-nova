@@ -10,6 +10,7 @@ import {
   Image,
   Flex,
   Divider,
+  Spinner,
 } from "@chakra-ui/react";
 import { FaEthereum } from "react-icons/fa";
 import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
@@ -54,6 +55,28 @@ const ItemDetail = ({
 }) => {
   const fakeName = faker.name.findName();
 
+  // const renderImage = () => {
+  // if (img !== "undefined") {
+  //   return (
+  //     <Image
+  //       rounded={"xl"}
+  //       height="350px"
+  //       width="310px"
+  //       borderRadius="80px"
+  //       p="10px"
+  //       objectFit={"scale-down"}
+  //       marginTop="0"
+  //       // src={
+  //       //   "https://static.turbosquid.com/Preview/2015/10/13__03_36_52/arm_helmet_2.jpg7ad54477-b4dc-4280-858f-03d6c9ff77a4DefaultHQ.jpg"
+  //       // }
+  //       src={require(`../../../images/medieval-fair/${img}`)}
+  //     />
+  //   );
+  // } else {
+  //   <Spinner thickness="5px" speed="0.65s" size="xl" marginBottom="20px" />;
+  // }
+  // };
+
   return (
     <Box mb="375px" mt="90px">
       <Flex justifyContent="space-around" w="75%" m="35px auto 0" gap="15px">
@@ -79,7 +102,7 @@ const ItemDetail = ({
               justifyContent={"space-evenly"}
               alignItems={"center"}
             >
-              <Badge fontWeight={600} fontSize={"md"} >
+              <Badge fontWeight={600} fontSize={"md"}>
                 {price}
                 <FaEthereum
                   style={{ marginTop: "0 !important", padding: "0" }}
@@ -107,7 +130,8 @@ const ItemDetail = ({
             rounded={"xl"}
             height="350px"
             width="310px"
-            borderRadius="80px"            p="10px"
+            borderRadius="80px"
+            p="10px"
             objectFit={"scale-down"}
             marginTop="0"
             src={
