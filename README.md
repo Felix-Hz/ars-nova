@@ -2,9 +2,9 @@
 
 <br/>
 
-### Antique NFTs Marketplace, done by Félix Hernández Vieyra
+### NFTs Medieval Fair, by Félix Hernández Vieyra
 
-- :rocket: Sell your antique botanical illustrations NFTs.
+- :rocket: Sell your NFTs antique helmets, weapons, grains, work utilities and much more.
 - 🖥️ Connect with other nifty-mad men around the world.
 - :zap: Join us, dearest and make profits out of your art!
 
@@ -34,7 +34,7 @@ I'm a student from the React.js course taught at <strong>[Coderhouse]</strong>, 
 
 ## What I aim to do 📌
 
-I aim to <strong>create a NFTs e-commerce that unites the new and the old</strong>. Being allowed to travel in time, I'll gather medieval botanical illustrators that wander through the city halls and fairs, while using the new technology that emerged from the blockchain in order to twist the chain of events that will unleash this revolution.
+I aim to create a <strong>NFTs e-commerce that unites the new and the old</strong>, replicating an old traditional medieval fair. I take the product inspiration from videogames such as RuneScape and AOs, and from movies such as The Lord of the Rings. Being allowed to travel in time, I'll gather medieval items that wander through the city halls and fairs, while using the new technology that emerged from the blockchain to twist the chain of events that will unleash this revolution.
 
 You can find more information [here](https://www.youtube.com/watch?v=mCdA4bJAGGk).
 
@@ -54,7 +54,36 @@ Don't tell anyone, but here's a tiny preview of the actual state of the project:
 
 <br/>
 
-<img width="75%" src="https://i.imgur.com/Xb3A1Lq.png?1" align="center" alt="Ars-nova-preview" />
+<img width="75%" src="https://imgur.com/Xb3A1Lq" align="center" alt="Ars-nova-preview" />
+
+<br/>
+
+## Installation and Setup Instructions
+
+> Clone down this repository. You will need node and npm installed globally on your machine. The packages that were used in this project are:
+> - @chakra-ui/react
+> - @react-router-dom
+> - @faker-js/faker
+> - @react-icons
+
+
+### Installation:
+
+```
+npm install
+```
+
+### To Start Server:
+
+```
+npm start
+```
+
+### Your app will be running on...
+
+```
+localhost:3000/
+```
 
 <br/>
 
