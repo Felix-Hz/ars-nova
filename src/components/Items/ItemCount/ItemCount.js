@@ -1,17 +1,6 @@
 // ------- IMPORTS ---------
 import React, { useState } from "react";
-import {
-  Box,
-  Input,
-  Heading,
-  Text,
-  Stack,
-  Flex,
-  InputGroup,
-  InputRightElement,
-  Button,
-  Badge,
-} from "@chakra-ui/react";
+import { Heading, Stack, Flex, Button, Badge } from "@chakra-ui/react";
 import "./ItemCount.css";
 import { MinusIcon, AddIcon, RepeatIcon } from "@chakra-ui/icons";
 
@@ -35,7 +24,13 @@ const ItemCount = ({ initial }) => {
   };
 
   return (
-    <Stack p="180px" mb="130px" direction={["column"]} alignItems="center" spacing="50px">
+    <Stack
+      p="180px"
+      mb="130px"
+      direction={["column"]}
+      alignItems="center"
+      spacing="50px"
+    >
       <Heading as="h3">Count until your brain comes out.</Heading>
       <Flex alignItems="center" alignContent="center" gap="10px">
         <Button
