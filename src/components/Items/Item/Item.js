@@ -1,22 +1,23 @@
 // --------  IMPORTS --------
-import React from "react";
+import React, { useContext } from "react";
 import {
   Box,
   Center,
   useColorModeValue,
   Heading,
-  Text,
+  Text, 
   Stack,
   Image,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-
+import { Context } from "../../../App";
 import { FaEthereum } from "react-icons/fa";
 
 // -------- CSS IMPORTS --------
 import "./Item.css";
 
 function Item({ id, name, img, price, category }) {
+
   return (
     <Link to={`/item/${id}`}>
       <Center h="auto">

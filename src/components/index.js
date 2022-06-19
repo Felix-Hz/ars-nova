@@ -18,3 +18,6 @@ export { default as RightNav } from "./Items/ItemList/RightNav/RightNav";
 
 // DATA
 export { listProducts, getProduct, productType } from "../data/ProductsDB";
+
+// CART
+export { Cart } from "./Cart/Cart"

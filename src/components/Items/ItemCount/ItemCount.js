@@ -1,11 +1,14 @@
 // ------- IMPORTS ---------
-import React, { useState } from "react";
-import { Heading, Stack, Flex, Button, Badge } from "@chakra-ui/react";
+import React, { useState, useContext } from "react";
+import { Heading, Stack, Flex, Button, Badge, Box } from "@chakra-ui/react";
 import "./ItemCount.css";
 import { MinusIcon, AddIcon, RepeatIcon } from "@chakra-ui/icons";
+import CartContext from "../../../context/CartContext";
 
-const ItemCount = ({ initial }) => {
+const ItemCount = ({ initial, id, price, name }) => {
   const [count, setCount] = useState(initial);
+
+  const { addItem, cart } = useContext(CartContext);
 
   const decrement = () => {
     if (count > 0) {
@@ -19,42 +22,38 @@ const ItemCount = ({ initial }) => {
     }
   };
 
-  const reset = () => {
-    setCount(initial);
+  const handleOnAdd = (count) => {
+    console.log(`se agregaron ${count} ${name}`);
+    addItem([{ id, name, price, count }]); 
   };
 
   return (
-    <Stack
-      p="180px"
-      mb="130px"
-      direction={["column"]}
-      alignItems="center"
-      spacing="50px"
-    >
-      <Heading as="h3">Count until your brain comes out.</Heading>
-      <Flex alignItems="center" alignContent="center" gap="10px">
+    <Stack direction={["column"]} alignItems="center">
+      <Flex alignItems="center" alignContent="center" gap="5px" mb="12px">
         <Button
           onClick={decrement}
-          p="15px"
           borderRadius="45px"
+          size="xs"
           bgColor="#4000ff"
         >
           <MinusIcon color="#e0ff00" />
         </Button>
-        <Badge p="50px" borderRadius="15px" colorScheme="purple">
-          <Heading>{count}</Heading>
+        <Badge p="10px" size="md" borderRadius="6px" colorScheme="purple">
+          <Heading as="h3" size="sm">
+            {count}
+          </Heading>
         </Badge>
         <Button
           onClick={increment}
-          p="15px"
           borderRadius="45px"
           bgColor="#4000ff"
+          size="xs"
         >
           <AddIcon color="#e0ff00" />
         </Button>
       </Flex>
-      <Button onClick={reset} maxW="30px" bgColor="#4000ff">
-        <RepeatIcon color="#e0ff00" />
+      <Button onClick={handleOnAdd} size="sm" bgColor="#e0ff00">
+        Add to cart
       </Button>
     </Stack>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import {
   Box,
-  Center,
+  Button,
   Avatar,
   Heading,
   Text,
@@ -15,6 +15,7 @@ import {
 import { FaEthereum } from "react-icons/fa";
 import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
 import { faker } from "@faker-js/faker";
+import { ItemCount } from "../../index";
 import "./ItemDetail.css";
 
 function Rating({ rating }) {
@@ -51,7 +52,7 @@ const ItemDetail = ({
   price,
   size,
   rating,
-  img,
+  img
 }) => {
   const fakeName = faker.name.findName();
 
@@ -79,8 +80,8 @@ const ItemDetail = ({
 
   return (
     <Box mb="375px" mt="90px">
-      <Flex justifyContent="space-around" w="75%" m="35px auto 0" gap="15px">
-        <Stack pt={2.5} align={"center"} height="inherit" w="30%">
+      <Flex justifyContent="space-around" w="75%" m="35px auto 0">
+        <Stack pt={2.5} align={"center"} height="inherit" w="30%" spacing="6">
           <Flex
             gap="10px"
             alignItems="center"
@@ -95,7 +96,6 @@ const ItemDetail = ({
             >
               {name}
             </Heading>
-
             <Stack
               display={"flex"}
               flexDirection={"row"}
@@ -126,6 +126,12 @@ const ItemDetail = ({
           <Text w="60%" align="center">
             {description}
           </Text>
+          <ItemCount
+            initial={0}
+            id={id}
+            name={name}
+            price={price}
+          />
         </Stack>
         <Box w="30%">
           <Image
@@ -147,13 +153,17 @@ const ItemDetail = ({
             name={fakeName}
             src={faker.internet.avatar(fakeName)}
           ></Avatar>
-          <Flex direction="column" gap="4px">
-            <Heading as="h2" size="md">
-              {fakeName}
-            </Heading>
-            <Divider />
-            <Text size="sm">{faker.name.jobType()}</Text>
-            <Text size="sm">{faker.internet.email(fakeName)}</Text>
+          <Flex direction="column">
+            <Flex direction="column" gap="10px">
+              <Heading as="h2" size="md">
+                {fakeName}
+              </Heading>
+              <Divider />
+              <Text size="sm">{faker.internet.email(fakeName)}</Text>
+              <Text size="sm" as="em">
+                {faker.name.jobType()}
+              </Text>
+            </Flex>
           </Flex>
         </Flex>
       </Flex>
