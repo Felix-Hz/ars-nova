@@ -12,12 +12,12 @@ import {
   InputRightElement,
   Button,
 } from "@chakra-ui/react";
+import { CartWidget } from "../index";
 
 // ------- CSS --------
 import "./Navbar.css";
 
 // ------- ICONS --------
-import { CartWidget } from "../index";
 import { AiOutlineSearch, AiOutlineShoppingCart } from "react-icons/ai";
 
 const Navbar = () => {
@@ -89,7 +89,7 @@ const Navbar = () => {
         </Box>
         <Box className="navbar-cart">
           <Link to="/cart">
-            <AiOutlineShoppingCart size={24} />
+            <CartWidget />
           </Link>
         </Box>
       </Flex>

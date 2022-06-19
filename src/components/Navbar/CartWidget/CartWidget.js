@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import CartContext from "../../../context/CartContext";
 
 const CartWidget = () => {
+  const { cartQty } = useContext(CartContext);
+  const totalQuantity = getCartQty();
+
   return (
     <div>
-      <i>Nothing here, just yet.</i>
+      <AiOutlineShoppingCart size={24} />
+      {totalQuantity}
     </div>
   );
 };
