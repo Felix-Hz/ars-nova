@@ -20,4 +20,4 @@ export { default as RightNav } from "./Items/ItemList/RightNav/RightNav";
 export { listProducts, getProduct, productType } from "../data/ProductsDB";
 
 // CART
-export { Cart } from "./Cart/Cart"
+export { default as Cart } from "./Cart/Cart"
