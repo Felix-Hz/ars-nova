@@ -18,7 +18,7 @@ import { CartWidget } from "../index";
 import "./Navbar.css";
 
 // ------- ICONS --------
-import { AiOutlineSearch, AiOutlineShoppingCart } from "react-icons/ai";
+import { AiOutlineSearch } from "react-icons/ai";
 
 const Navbar = () => {
   return (

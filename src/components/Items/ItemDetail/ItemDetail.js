@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Button,
@@ -17,6 +17,7 @@ import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
 import { faker } from "@faker-js/faker";
 import { ItemCount } from "../../index";
 import "./ItemDetail.css";
+import { Link } from "react-router-dom";
 
 function Rating({ rating }) {
   return (
@@ -52,31 +53,10 @@ const ItemDetail = ({
   price,
   size,
   rating,
-  img
+  img,
 }) => {
   const fakeName = faker.name.findName();
-
-  // const renderImage = () => {
-  // if (img !== "undefined") {
-  //   return (
-  //     <Image
-  //       rounded={"xl"}
-  //       height="350px"
-  //       width="310px"
-  //       borderRadius="80px"
-  //       p="10px"
-  //       objectFit={"scale-down"}
-  //       marginTop="0"
-  //       // src={
-  //       //   "https://static.turbosquid.com/Preview/2015/10/13__03_36_52/arm_helmet_2.jpg7ad54477-b4dc-4280-858f-03d6c9ff77a4DefaultHQ.jpg"
-  //       // }
-  //       src={require(`../../../images/medieval-fair/${img}`)}
-  //     />
-  //   );
-  // } else {
-  //   <Spinner thickness="5px" speed="0.65s" size="xl" marginBottom="20px" />;
-  // }
-  // };
+  const [quantityAdded, setQuantityAdded] = useState(0);
 
   return (
     <Box mb="375px" mt="90px">
@@ -126,12 +106,17 @@ const ItemDetail = ({
           <Text w="60%" align="center">
             {description}
           </Text>
-          <ItemCount
-            initial={0}
-            id={id}
-            name={name}
-            price={price}
-          />
+          {quantityAdded === 0 ? (
+            <ItemCount
+              initial={1}
+              id={id}
+              name={name}
+              price={price}
+              setQuantityAdded={setQuantityAdded}
+            />
+          ) : (
+            <Link to="/cart"> Terminar compra </Link>
+          )}
         </Stack>
         <Box w="30%">
           <Image

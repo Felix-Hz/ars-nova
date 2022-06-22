@@ -2,29 +2,30 @@
 import React, { useState, useContext } from "react";
 import { Heading, Stack, Flex, Button, Badge, Box } from "@chakra-ui/react";
 import "./ItemCount.css";
-import { MinusIcon, AddIcon, RepeatIcon } from "@chakra-ui/icons";
+import { MinusIcon, AddIcon } from "@chakra-ui/icons";
 import CartContext from "../../../context/CartContext";
 
-const ItemCount = ({ initial, id, price, name }) => {
+const ItemCount = ({ initial, id, price, name, setQuantityAdded }) => {
   const [count, setCount] = useState(initial);
 
-  const { addItem, cart } = useContext(CartContext);
+  const { addItem } = useContext(CartContext);
 
   const decrement = () => {
-    if (count > 0) {
+    if (count > 1) {
       setCount((value) => value - 1);
     }
   };
 
   const increment = () => {
-    if (count >= 0) {
+    if (count >= 1) {
       setCount((value) => value + 1);
     }
   };
 
   const handleOnAdd = (count) => {
     console.log(`se agregaron ${count} ${name}`);
-    addItem([{ id, name, price, count }]); 
+    addItem([{ id, name, price, count }]);
+    setQuantityAdded(count);
   };
 
   return (

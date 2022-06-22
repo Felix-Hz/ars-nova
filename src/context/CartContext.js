@@ -1,13 +1,24 @@
-import { useState, createContext } from "react";
+import { useState, useEffect, createContext } from "react";
 
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
+  const [totalQuantity, setTotalQuantity] = useState(0);
   console.log(cart);
 
+  useEffect(() => {
+    let totalQuantity = 0;
+
+    cart.forEach((p) => {
+      totalQuantity += p.quantity;
+    });
+
+    setTotalQuantity(totalQuantity);
+  }, [cart]);
+
   const isInCart = (id) => {
-    cart.some((p) => p.id === addedProduct.id);
+    cart.some((p) => p.id === id);
   };
 
   const addItem = (addedProduct) => {
@@ -21,20 +32,23 @@ export const CartProvider = ({ children }) => {
     setCart(newCart);
   };
 
-  const getCartQty = () => {
-    let totalQuantity = 0;
+  // const getCartQty = () => {
+  //   let totalQuantity = 0; 
 
-    cart.forEach((p) => {
-      totalQuantity += p.quantity;
-    });
-    return totalQuantity;
-  };
+  //   cart.forEach((p) => {
+  //     totalQuantity += p.quantity;
+  //   });
+
+  //   return totalQuantity;
+  // };
 
   return (
-    <createContext.Provider value={{ cart, addItem, removeItem, getCartQty }}>
+    <createContext.Provider
+      value={{ cart, totalQuantity, addItem, isInCart, removeItem }}
+    >
       {children}
     </createContext.Provider>
   );
 };
 
-export default CartContext;
+export default CartProvider;

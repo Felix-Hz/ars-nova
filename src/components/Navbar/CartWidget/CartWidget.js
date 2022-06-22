@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
 import CartContext from "../../../context/CartContext";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 const CartWidget = () => {
-  const { cartQty } = useContext(CartContext);
-  const totalQuantity = getCartQty();
+  const { getCartQty, totalQuantity } = useContext(CartContext);
+
+  // const totalQuantity = getCartQty();
 
   return (
     <div>

@@ -10,20 +10,17 @@ import {
   ItemDetailContainer,
   Cart,
 } from "./components/index";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ChakraProvider, Box } from "@chakra-ui/react";
-import { useState, createContext } from "react";
 import { CartProvider } from "./context/CartContext";
 
 /* ------------------------------------------------------------ */
 
-export const Context = createContext();
-
 function App() {
   return (
-    <CartProvider>
+    <ChakraProvider>
       <Router>
-        <ChakraProvider>
+        <CartProvider>
           <Box className="App">
             <Navbar />
             <Box className="routes">
@@ -47,7 +44,7 @@ function App() {
                 <Route
                   exact
                   path="/count"
-                  element={<ItemCount initial={0} />}
+                  element={<ItemCount initial={1} />}
                 />
                 <Route exact path="/cart" element={<CartWidget />} />
                 <Route
@@ -60,9 +57,9 @@ function App() {
             </Box>
             <Footer />
           </Box>
-        </ChakraProvider>
+        </CartProvider>
       </Router>
-    </CartProvider>
+    </ChakraProvider>
   );
 }
 
