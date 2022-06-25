@@ -12,6 +12,7 @@ const CartWidget = () => {
     <div>
       <Flex gap="4px">
         <AiOutlineShoppingCart size={24} />
+        {console.log(totalQuantity)}
         {totalQuantity}
       </Flex>
     </div>

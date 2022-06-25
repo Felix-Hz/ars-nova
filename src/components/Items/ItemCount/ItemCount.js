@@ -53,7 +53,7 @@ const ItemCount = ({ initial, id, price, name, setQuantityAdded }) => {
           <AddIcon color="#e0ff00" />
         </Button>
       </Flex>
-      <Button onClick={handleOnAdd(count)} size="sm" bgColor="#e0ff00">
+      <Button onClick={() => handleOnAdd(count)} size="sm" bgColor="#e0ff00">
         Add to cart
       </Button>
     </Stack>
