@@ -22,10 +22,10 @@ const ItemCount = ({ initial, id, price, name, setQuantityAdded }) => {
     }
   };
 
-  const handleOnAdd = (count) => {
-    console.log(`se agregaron ${count} ${name}`);
-    addItem([{ id, name, price, count }]);
-    setQuantityAdded(count);
+  const handleOnAdd = (c) => {
+    console.log(`Se agregaron ${c} ${name}`);
+    addItem([{ id, name, price, c }]);
+    setQuantityAdded(c);
   };
 
   return (
@@ -53,7 +53,7 @@ const ItemCount = ({ initial, id, price, name, setQuantityAdded }) => {
           <AddIcon color="#e0ff00" />
         </Button>
       </Flex>
-      <Button onClick={handleOnAdd} size="sm" bgColor="#e0ff00">
+      <Button onClick={handleOnAdd(count)} size="sm" bgColor="#e0ff00">
         Add to cart
       </Button>
     </Stack>

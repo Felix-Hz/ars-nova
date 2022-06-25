@@ -34,7 +34,7 @@ const Landing = (props) => {
         </Heading>
       </Box>
       <Image
-        src={process.env.PUBLIC_URL + "/images/landing.png/"}
+        src={process.env.PUBLIC_URL + "/images/landing.png"}
         className="character-image"
         maxH="650px"
         alt="character-image"

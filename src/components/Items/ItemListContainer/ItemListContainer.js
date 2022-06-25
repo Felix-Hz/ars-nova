@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { ItemList, listProducts, productType } from "../../index";
 import { Box, Heading, Spinner, Flex } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
+import { getDocs, collection } from "firebase/firestore";
+import { db } from "../../../services/firebase";
 
 // -------- CSS IMPORTS --------
 import "./ItemListContainer.css";
@@ -17,29 +19,47 @@ const ItemListContainer = () => {
   useEffect(() => {
     setLoading(true);
 
-    if (!type) {
-      listProducts()
-        .then((res) => {
-          setProducts(res);
-        })
-        .catch((e) => {
-          console.log(e);
-        })
-        .finally(() => {
-          setLoading(false);
+    const collectionRef = collection(db, "products");
+    getDocs(collectionRef)
+      .then((res) => {
+        console.log(res);
+        const productsFormatted = res.docs.map((doc) => {
+          // the .data() brings every field after id from Firebase
+          return { id: doc.id, ...doc.data() };
         });
-    } else {
-      productType(type)
-        .then((res) => {
-          setProducts(res);
-        })
-        .catch((e) => {
-          console.log(e);
-        })
-        .finally(() => {
-          setLoading(false);
-        });
-    }
+        setProducts(productsFormatted);
+      })
+      .catch((e) => {
+        console.log(e);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+
+    // ASYNCMOCK DDBB =
+    // if (!type) {
+    //   listProducts()
+    //     .then((res) => {
+    //       setProducts(res);
+    //     })
+    //     .catch((e) => {
+    //       console.log(e);
+    //     })
+    //     .finally(() => {
+    //       setLoading(false);
+    //     });
+    // } else {
+    //   productType(type)
+    //     .then((res) => {
+    //       setProducts(res);
+    //     })
+    //     .catch((e) => {
+    //       console.log(e);
+    //     })
+    //     .finally(() => {
+    //       setLoading(false);
+    //     });
+    // }
   }, [type]);
 
   if (loading) {
