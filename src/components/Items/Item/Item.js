@@ -39,7 +39,7 @@ function Item({ id, name, img, price, category }) {
               width={150}
               objectFit={"scale-down"}
               marginTop="0"
-              src={require(`../../../images/medieval-fair/${img}`)}
+              src={process.env.PUBLIC_URL + `../../../images/medieval-fair/${img}`} 
             />
           </Box>
           <Stack pt={2.5} align={"center"} height="inherit">

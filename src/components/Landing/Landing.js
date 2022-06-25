@@ -1,5 +1,5 @@
 import React from "react";
-import characterImage from "../../images/landing.png";
+// import characterImage from "/images/landing.png/";
 import "./Landing.css";
 import { Box, Flex, Heading, Image, Link } from "@chakra-ui/react";
 
@@ -34,7 +34,7 @@ const Landing = (props) => {
         </Heading>
       </Box>
       <Image
-        src={characterImage}
+        src={process.env.PUBLIC_URL + "/images/landing.png/"}
         className="character-image"
         maxH="650px"
         alt="character-image"

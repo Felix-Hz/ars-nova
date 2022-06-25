@@ -127,10 +127,7 @@ const ItemDetail = ({
             p="10px"
             objectFit={"scale-down"}
             marginTop="0"
-            src={
-              "https://static.turbosquid.com/Preview/2015/10/13__03_36_52/arm_helmet_2.jpg7ad54477-b4dc-4280-858f-03d6c9ff77a4DefaultHQ.jpg"
-            }
-            // src={require(`../../../images/medieval-fair/${img}`)}
+            src={process.env.PUBLIC_URL + `../../../images/medieval-fair/${img}`}
           />
         </Box>
         <Flex justifyContent="space-evenly" w="30%">

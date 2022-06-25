@@ -33,7 +33,7 @@ export const CartProvider = ({ children }) => {
   };
 
   // const getCartQty = () => {
-  //   let totalQuantity = 0; 
+  //   let totalQuantity = 0;
 
   //   cart.forEach((p) => {
   //     totalQuantity += p.quantity;
@@ -43,12 +43,12 @@ export const CartProvider = ({ children }) => {
   // };
 
   return (
-    <createContext.Provider
+    <CartContext.Provider
       value={{ cart, totalQuantity, addItem, isInCart, removeItem }}
     >
       {children}
-    </createContext.Provider>
+    </CartContext.Provider>
   );
 };
 
-export default CartProvider;
+export default CartContext;
