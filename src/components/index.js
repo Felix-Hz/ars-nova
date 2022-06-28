@@ -14,10 +14,11 @@ export { default as ItemDetail } from "./Items/ItemDetail/ItemDetail";
 
 // ITEM GALLERY
 export { default as LeftNav } from "./Items/ItemList/LeftNav/LeftNav";
-export { default as RightNav } from "./Items/ItemList/RightNav/RightNav";
 
 // DATA
 export { listProducts, getProduct, productType } from "../data/ProductsDB";
 
 // CART
-export { default as Cart } from "./Cart/Cart"
+export { default as Cart } from "./Cart/Cart";
+export { default as CartItem } from "./Cart/CartItem/CartItem";
+export { default as CartItemList } from "./Cart/CartItemList/CartItemList";

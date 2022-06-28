@@ -22,20 +22,18 @@ const LeftNav = ({ products }) => {
         <Divider />
         <Link to="/shop">All products</Link>
         <Divider />
-
       </Flex>
+
       <Flex direction="column" gap="8px">
         <Heading as="h3" size="md">
-          Programming languages
+          Relevance
         </Heading>
         <Divider />
-        <Link to="https://www.javascript.com/">JavaScript</Link>
+        <Text>Trending</Text>
         <Divider />
-        <Link to="https://solidity-es.readthedocs.io/es/latest/">Solidity</Link>
+        <Text>Latest arrivals</Text>
         <Divider />
-        <Link to="https://www.rust-lang.org/es">Rust</Link>
-        <Divider />
-        <Link to="https://www.python.org/">Python</Link>
+        <Text>Price</Text>
         <Divider />
       </Flex>
     </Flex>

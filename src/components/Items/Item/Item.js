@@ -1,5 +1,5 @@
 // --------  IMPORTS --------
-import React, { useContext } from "react";
+import React from "react";
 import {
   Box,
   Center,
@@ -10,7 +10,6 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { Context } from "../../../App";
 import { FaEthereum } from "react-icons/fa";
 
 // -------- CSS IMPORTS --------

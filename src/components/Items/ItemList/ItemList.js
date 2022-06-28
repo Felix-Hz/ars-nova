@@ -1,6 +1,6 @@
 // -------- IMPORTS --------
 import React from "react";
-import { Item, RightNav, LeftNav } from "../../index";
+import { Item, LeftNav } from "../../index";
 import { Flex, Grid, GridItem } from "@chakra-ui/react";
 
 // -------- CSS IMPORTS --------
@@ -39,7 +39,6 @@ const ItemList = ({ products }) => {
           </GridItem>
         ))}
       </Grid>
-      <RightNav />
     </Flex>
   );
 };

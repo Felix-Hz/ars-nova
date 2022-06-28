@@ -4,11 +4,10 @@ import {
   Navbar,
   Landing,
   Footer,
-  CartWidget,
   ItemListContainer,
   ItemCount,
   ItemDetailContainer,
-  Cart,
+  CartItemList,
 } from "./components/index";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ChakraProvider, Box } from "@chakra-ui/react";
@@ -46,13 +45,12 @@ function App() {
                   path="/count"
                   element={<ItemCount initial={1} />}
                 />
-                <Route exact path="/cart" element={<CartWidget />} />
                 <Route
                   exact
                   path="/item/:itemId"
                   element={<ItemDetailContainer />}
                 />
-                <Route exact path="/cart" element={<Cart />} />
+                <Route exact path="/cart" element={<CartItemList />} />
               </Routes>
             </Box>
             <Footer />

@@ -11,7 +11,9 @@ export const CartProvider = ({ children }) => {
     let totalQuantity = 0;
 
     cart.forEach((p) => {
-      totalQuantity += p.quantity;
+      p.forEach((i) => {
+        totalQuantity += i.quantity;
+      });
     });
 
     setTotalQuantity(totalQuantity);
