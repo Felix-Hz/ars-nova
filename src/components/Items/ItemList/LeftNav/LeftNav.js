@@ -10,15 +10,13 @@ const LeftNav = ({ products }) => {
           Categories
         </Heading>
         <Divider />
-        {/* {products.map((i) => {
-          <Box>
-            <Text>{i.type}</Text>
-            <Divider />
-          </Box>;
-        })} */}
         <Link to="/category/weapons">Weapons</Link>
         <Divider />
         <Link to="/category/helmets">Helmets</Link>
+        <Divider />
+        <Link to="/category/clothes">Clothes</Link>
+        <Divider />
+        <Link to="/category/shields">Shields</Link>
         <Divider />
         <Link to="/shop">All products</Link>
         <Divider />
