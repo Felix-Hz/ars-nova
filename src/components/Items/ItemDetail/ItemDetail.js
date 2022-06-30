@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
   Box,
-  Button,
   Avatar,
   Heading,
   Text,
@@ -10,7 +9,6 @@ import {
   Image,
   Flex,
   Divider,
-  Spinner,
 } from "@chakra-ui/react";
 import { FaEthereum } from "react-icons/fa";
 import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
@@ -127,7 +125,9 @@ const ItemDetail = ({
             p="10px"
             objectFit={"scale-down"}
             marginTop="0"
-            src={process.env.PUBLIC_URL + `../../../images/medieval-fair/${img}`}
+            src={
+              process.env.PUBLIC_URL + `../../../images/medieval-fair/${img}`
+            }
           />
         </Box>
         <Flex justifyContent="space-evenly" w="30%">

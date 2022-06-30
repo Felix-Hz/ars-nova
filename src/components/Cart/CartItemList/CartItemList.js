@@ -1,12 +1,17 @@
-import React from 'react'
+import React from "react";
 import { CartItem } from "../../index";
+import { Box, Divider } from "@chakra-ui/react";
 
-const CartItemList = () => {
+const CartItemList = ({ productsAdded }) => {
   return (
-    <div>
-      <CartItem />
-    </div>
-  )
-}
+    <Box>
+      {productsAdded.map((p) => (
+        <Divider key={p.id}>
+          <CartItem key={p.id} {...p} />
+        </Divider>
+      ))}
+    </Box>
+  );
+};
 
-export default CartItemList
+export default CartItemList;

@@ -10,9 +10,9 @@ export const CartProvider = ({ children }) => {
   useEffect(() => {
     let totalQuantity = 0;
 
-    cart.forEach((p) => {
-      p.forEach((i) => {
-        totalQuantity += i.quantity;
+    cart.forEach((array) => {
+      array.forEach((product) => {
+        totalQuantity += product.quantity;
       });
     });
 
@@ -38,19 +38,25 @@ export const CartProvider = ({ children }) => {
     setCart([]);
   };
 
-  // const getCartQty = () => {
-  //   let totalQuantity = 0;
-
-  //   cart.forEach((p) => {
-  //     totalQuantity += p.quantity;
-  //   });
-
-  //   return totalQuantity;
-  // };
+  const getTotal = () => {
+    let total = 0;
+    cart.forEach((prod) => {
+      total += prod.quantity * prod.price;
+    });
+    return total;
+  };
 
   return (
     <CartContext.Provider
-      value={{ cart, totalQuantity, addItem, isInCart, removeItem, clearCart }}
+      value={{
+        cart,
+        totalQuantity,
+        addItem,
+        isInCart,
+        removeItem,
+        clearCart,
+        getTotal,
+      }}
     >
       {children}
     </CartContext.Provider>
