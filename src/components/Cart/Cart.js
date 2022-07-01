@@ -29,7 +29,8 @@ const Cart = () => {
 
   const collectionRef = collection(db, "products");
 
-  getDocs(query(collectionRef, where(documentId(), "in", ids)))
+  if (ids.length > 0) {
+    getDocs(query(collectionRef, where(documentId(), "in", ids)))
     .then((response) => {
       response.docs.forEach((doc) => {
         const dataDoc = doc.data();
@@ -39,7 +40,7 @@ const Cart = () => {
         const prodQuantity = prod.quantity;
 
         if (dataDoc.quantity > prodQuantity) {
-          console.log("Hay producots que no tienen stock");
+          console.log("There are products out of stock.");
         }
       });
     })
@@ -53,6 +54,8 @@ const Cart = () => {
     .finally(() => {
       setLoading(false);
     });
+  }
+  
 
   if (loading) {
     return (
