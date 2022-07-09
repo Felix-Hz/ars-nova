@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 import { Box, Button, Heading, Spinner } from "@chakra-ui/react";
 
 import {
-  addDoc,
   collection,
   getDocs,
   query,
@@ -16,7 +15,6 @@ import {
 } from "firebase/firestore";
 
 import { db } from "../../services/firebase/index";
-import { BsCheckLg } from "react-icons/bs";
 
 const Cart = () => {
   const [loading, setLoading] = useState(false);
@@ -44,18 +42,8 @@ const Cart = () => {
           const dataDoc = doc.data();
 
           const prod = cart.find((prod) => prod.id === doc.id);
-
-          // const prodQuantity = prod.quantity;
-
-          // if (dataDoc.quantity > prodQuantity) {
-          //   console.log("There are products out of stock.");
-          // }
         });
       })
-      // .then(({ id }) => {
-      //   console.log(`Your order has been created succesfully. Order ID: ${id}`);
-      //   clearCart();
-      // })
       .catch((error) => {
         console.log(error);
       })
