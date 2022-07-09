@@ -18,6 +18,11 @@ const CartItem = ({ id, name, quantity, price }) => {
     removeItem(id);
   };
 
+  // console.log(id)
+  // console.log(name)
+  // console.log(quantity)
+  // console.log(price)
+
   return (
     <Box>
       <Box>

@@ -12,6 +12,7 @@ import {
   documentId,
 } from "firebase/firestore";
 import { db } from "../../services/firebase/index";
+import { BsCheckLg } from "react-icons/bs";
 
 const Cart = () => {
   const [loading, setLoading] = useState(false);
@@ -20,42 +21,49 @@ const Cart = () => {
   const total = getTotal();
 
   const ids = [];
-
+  
   cart.forEach((array) => {
     array.forEach((product) => {
       ids.push(product.id);
     });
   });
-
+  
+  console.log(ids)
+  
   const collectionRef = collection(db, "products");
 
   if (ids.length > 0) {
     getDocs(query(collectionRef, where(documentId(), "in", ids)))
-    .then((response) => {
-      response.docs.forEach((doc) => {
-        const dataDoc = doc.data();
+      .then((response) => {
+        response.docs.forEach((doc) => {
+          const dataDoc = doc.data();
 
-        const prod = cart.find((prod) => prod.id === doc.id);
+          const prod = cart.find((prod) => prod.id === doc.id);
 
-        const prodQuantity = prod.quantity;
+          // const prodQuantity = prod.quantity;
 
-        if (dataDoc.quantity > prodQuantity) {
-          console.log("There are products out of stock.");
-        }
+          // if (dataDoc.quantity > prodQuantity) {
+          //   console.log("There are products out of stock.");
+          // }
+        });
+      })
+      // .then(({ id }) => {
+      //   console.log(`Your order has been created succesfully. Order ID: ${id}`);
+      //   clearCart();
+      // })
+      .catch((error) => {
+        console.log(error);
+      })
+      .finally(() => {
+        setLoading(false);
       });
-    })
-    .then(({ id }) => {
-      console.log(`Your order has been created succesfully. Order ID: ${id}`);
-      clearCart();
-    })
-    .catch((error) => {
-      console.log(error);
-    })
-    .finally(() => {
-      setLoading(false);
-    });
+  } else {
+    return (
+      <Heading as="h1" p="200px">
+        Oops! It seems that your cart is empty.
+      </Heading>
+    );
   }
-  
 
   if (loading) {
     return (
@@ -68,16 +76,13 @@ const Cart = () => {
     );
   }
 
-  if (totalQuantity === 0) {
-    return <Heading as="h1">The cart is empty.</Heading>;
-  }
-
   return (
     <>
       <Heading as="h1">Cart</Heading>
       <CartItemList productsAdded={cart} />
       <Heading as="h3">Total: ${total}</Heading>
       <Button onClick={() => clearCart()}>Clear cart</Button>
+      <Button onClick={() => console.log("hola")}>Purchase your order</Button>
     </>
   );
 };

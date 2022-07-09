@@ -3,13 +3,21 @@ import { CartItem } from "../../index";
 import { Box, Divider } from "@chakra-ui/react";
 
 const CartItemList = ({ productsAdded }) => {
+  console.log(productsAdded);
+
+  let products = [];
+
+  productsAdded.forEach((i) => {
+    products.push(i);
+  });
+
+  console.log(products);
+
   return (
     <Box>
-      {productsAdded.map((p) => (
-        <Divider key={p.id}>
-          <CartItem key={p.id} {...p} />
-        </Divider>
-      ))}
+      {products.map((p) => { // BUG IN THIS LOOP - ARRAY INSIDE ARRAY
+        return <CartItem key={p.id} {...p} />;
+      })}
     </Box>
   );
 };
