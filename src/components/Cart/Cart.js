@@ -18,7 +18,7 @@ import { db } from "../../services/firebase/index";
 
 const Cart = () => {
   const [loading, setLoading] = useState(false);
-  const { cart, totalQuantity, getTotal, clearCart } = useContext(CartContext);
+  const { cart, getTotal, clearCart } = useContext(CartContext);
   let navigate = useNavigate();
 
   const total = getTotal();
