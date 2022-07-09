@@ -60,7 +60,7 @@ const ContactForm = () => {
                 placeholder="Type your full name"
               />
             </FormControl>
-            <FormControl>
+            <FormControl mt={4}>
               <FormLabel>Email</FormLabel>
               <Input
                 id="email"
@@ -68,10 +68,20 @@ const ContactForm = () => {
                 onChange={(event) => setEmail(event.target.value)}
                 value={email}
                 type="email"
-                placeholder="email@address.com"
+                placeholder="Enter your email"
               />
             </FormControl>
-            <FormControl>
+            <FormControl mt={2}>
+              <Input
+                id="email"
+                name="email"
+                onChange={(event) => setEmail(event.target.value)}
+                value={email}
+                type="email"
+                placeholder="Enter your email again"
+              />
+            </FormControl>
+            <FormControl mt={4}>
               <FormLabel>Phone</FormLabel>
               <Input
                 id="phone"
@@ -82,7 +92,7 @@ const ContactForm = () => {
                 placeholder="Phone number"
               />
             </FormControl>
-            <FormControl>
+            <FormControl mt={4}>
               <FormLabel>Address</FormLabel>
               <Input
                 id="address"
