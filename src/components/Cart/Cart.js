@@ -81,7 +81,7 @@ const Cart = () => {
     );
   }
 
-  const checkoutUrl = () => {
+  const navigateCheckoutForm = () => {
     let path = `/checkout`;
     navigate(path);
   };
@@ -92,7 +92,7 @@ const Cart = () => {
       <CartItemList productsAdded={cart} />
       <Heading as="h3">Total: ${total}</Heading>
       <Button onClick={() => clearCart()}>Clear cart</Button>
-      <Button onClick={() => checkoutUrl()}>Go to checkout</Button>
+      <Button onClick={() => navigateCheckoutForm()}>Go to checkout</Button>
     </>
   );
 };
