@@ -9,7 +9,9 @@ import {
   ItemDetailContainer,
   CartItemList,
   Cart,
+  ContactForm,
 } from "./components/index";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ChakraProvider, Box } from "@chakra-ui/react";
 import { CartProvider } from "./context/CartContext";
@@ -52,6 +54,7 @@ function App() {
                   element={<ItemDetailContainer />}
                 />
                 <Route exact path="/cart" element={<Cart />} />
+                <Route exact path="/checkout" element={<ContactForm />} />
               </Routes>
             </Box>
             <Footer />

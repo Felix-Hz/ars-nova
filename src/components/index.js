@@ -22,3 +22,4 @@ export { listProducts, getProduct, productType } from "../data/ProductsDB";
 export { default as Cart } from "./Cart/Cart";
 export { default as CartItem } from "./Cart/CartItem/CartItem";
 export { default as CartItemList } from "./Cart/CartItemList/CartItemList";
+export { default as ContactForm } from "./ContactForm/ContactForm";

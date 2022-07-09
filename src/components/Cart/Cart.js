@@ -2,34 +2,39 @@ import { useState, useContext } from "react";
 import CartContext from "../../context/CartContext";
 import { CartItemList } from "../index";
 
+import { useNavigate } from "react-router-dom";
+
 import { Box, Button, Heading, Spinner } from "@chakra-ui/react";
 
 import {
+  addDoc,
   collection,
   getDocs,
   query,
   where,
   documentId,
 } from "firebase/firestore";
+
 import { db } from "../../services/firebase/index";
 import { BsCheckLg } from "react-icons/bs";
 
 const Cart = () => {
   const [loading, setLoading] = useState(false);
   const { cart, totalQuantity, getTotal, clearCart } = useContext(CartContext);
+  let navigate = useNavigate();
 
   const total = getTotal();
 
   const ids = [];
-  
+
   cart.forEach((array) => {
     array.forEach((product) => {
       ids.push(product.id);
     });
   });
-  
-  console.log(ids)
-  
+
+  console.log(ids);
+
   const collectionRef = collection(db, "products");
 
   if (ids.length > 0) {
@@ -76,13 +81,18 @@ const Cart = () => {
     );
   }
 
+  const checkoutUrl = () => {
+    let path = `/checkout`;
+    navigate(path);
+  };
+
   return (
     <>
       <Heading as="h1">Cart</Heading>
       <CartItemList productsAdded={cart} />
       <Heading as="h3">Total: ${total}</Heading>
       <Button onClick={() => clearCart()}>Clear cart</Button>
-      <Button onClick={() => console.log("hola")}>Purchase your order</Button>
+      <Button onClick={() => checkoutUrl()}>Go to checkout</Button>
     </>
   );
 };
