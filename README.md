@@ -19,7 +19,7 @@ I'm a student from the React.js course taught at <strong>[Coderhouse]</strong>, 
 <details>
   <summary>:octocat: More about me</summary>
   <br/>
-  Well, hey there! I'm a 23 years old code apprentice, pursuing a career as a Front-end Developer. Advanced Psychology student, mediocre musician, data lover and progressive rock fan. The real embodiment of a Jack of all trades, but master of none.
+  Well, hey there! I'm a 23 years old code apprentice, pursuing a career as a Developer. Mediocre musician, data lover and progressive rock fan. The real embodiment of a Jack of all trades, but master of none.
   <br/>
   <br/>
   
