@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Heading, Text, Divider, Box } from "@chakra-ui/react";
+import { Flex, Heading, Text, Divider } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 const LeftNav = ({ products }) => {

@@ -66,13 +66,13 @@ const Navbar = () => {
         gap="30px"
         p="10px"
       >
-        <Box className="navbar-explore">
+        {/* <Box className="navbar-explore">
           <Link to="/count">
             <Text fontSize="lg" className="explore-text">
               Count to Infinity
             </Text>
           </Link>
-        </Box>
+        </Box> */}
         <Box className="navbar-explore">
           <Link to="/shop">
             <Text fontSize="lg" className="explore-text">

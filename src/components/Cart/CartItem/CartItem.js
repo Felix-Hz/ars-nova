@@ -2,14 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import CartContext from "../../../context/CartContext";
 
-import {
-  Box,
-  Button,
-  Heading,
-  Text,
-  Divider,
-  Spinner,
-} from "@chakra-ui/react";
+import { Box, Button, Heading, Text } from "@chakra-ui/react";
 
 const CartItem = ({ id, name, quantity, price }) => {
   const { removeItem } = useContext(CartContext);
@@ -17,11 +10,6 @@ const CartItem = ({ id, name, quantity, price }) => {
   const handleRemove = (id) => {
     removeItem(id);
   };
-
-  // console.log(id)
-  // console.log(name)
-  // console.log(quantity)
-  // console.log(price)
 
   return (
     <Box>

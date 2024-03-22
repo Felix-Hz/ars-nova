@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import CartContext from "../../../context/CartContext";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { Box, Flex, Heading, Image, Link } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 
 const CartWidget = () => {
   const { totalQuantity } = useContext(CartContext);

@@ -1,6 +1,6 @@
 // ------- IMPORTS ---------
 import React, { useState, useContext } from "react";
-import { Heading, Stack, Flex, Button, Badge, Box } from "@chakra-ui/react";
+import { Heading, Stack, Flex, Button, Badge } from "@chakra-ui/react";
 import "./ItemCount.css";
 import { MinusIcon, AddIcon } from "@chakra-ui/icons";
 import CartContext from "../../../context/CartContext";
