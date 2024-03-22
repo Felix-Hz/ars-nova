@@ -1,12 +1,10 @@
-import React, { useState, useContext } from "react";
-import CartContext from "../../context/CartContext";
+import React, { useState } from "react";
+// import CartContext from "../../context/CartContext";
 
 import {
   Box,
   Button,
-  Heading,
   Flex,
-  Spinner,
   FormControl,
   Input,
   FormLabel,
@@ -21,8 +19,8 @@ const ContactForm = () => {
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
 
-  const [loading, setLoading] = useState(false);
-  const { cart, getTotal } = useContext(CartContext);
+  // const [loading, setLoading] = useState(false);
+  // const { cart, getTotal } = useContext(CartContext);
 
   const handleCreateOrder = () => {
     console.log("Creando orden...");

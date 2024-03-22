@@ -47,9 +47,7 @@ const ItemDetail = ({
   name,
   description,
   category,
-  origin,
   price,
-  size,
   rating,
   img,
 }) => {

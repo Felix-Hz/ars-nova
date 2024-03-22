@@ -1,7 +1,7 @@
 // -------- IMPORTS --------
 import React, { useEffect, useState } from "react";
-import { ItemList, listProducts, productType } from "../../index";
-import { Box, Heading, Spinner, Flex } from "@chakra-ui/react";
+import { ItemList } from "../../index";
+import { Box, Heading, Spinner } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import { getDocs, collection, query, where } from "firebase/firestore";
 import { db } from "../../../services/firebase";
@@ -19,9 +19,9 @@ const ItemListContainer = () => {
   useEffect(() => {
     setLoading(true);
 
-    const collectionRef = type ? (
-      query(collection(db, "products"), where("type", "==", type))
-    ) : collection(db, "products");
+    const collectionRef = type
+      ? query(collection(db, "products"), where("type", "==", type))
+      : collection(db, "products");
     getDocs(collectionRef)
       .then((res) => {
         console.log(res);

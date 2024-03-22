@@ -1,6 +1,6 @@
 import React from "react";
 import { CartItem } from "../../index";
-import { Box, Divider } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 const CartItemList = ({ productsAdded }) => {
   console.log(productsAdded);
@@ -15,7 +15,8 @@ const CartItemList = ({ productsAdded }) => {
 
   return (
     <Box>
-      {products.map((p) => { // BUG IN THIS LOOP - ARRAY INSIDE ARRAY
+      {products.map((p) => {
+        // BUG IN THIS LOOP - ARRAY INSIDE ARRAY
         return <CartItem key={p.id} {...p} />;
       })}
     </Box>

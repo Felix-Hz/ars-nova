@@ -7,7 +7,6 @@ import {
   ItemListContainer,
   ItemCount,
   ItemDetailContainer,
-  CartItemList,
   Cart,
   ContactForm,
 } from "./components/index";

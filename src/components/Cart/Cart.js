@@ -39,9 +39,8 @@ const Cart = () => {
     getDocs(query(collectionRef, where(documentId(), "in", ids)))
       .then((response) => {
         response.docs.forEach((doc) => {
-          const dataDoc = doc.data();
-
-          const prod = cart.find((prod) => prod.id === doc.id);
+          // const dataDoc = doc.data();
+          // const prod = cart.find((prod) => prod.id === doc.id);
         });
       })
       .catch((error) => {
