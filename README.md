@@ -17,8 +17,10 @@ You can find more information [here](https://www.youtube.com/watch?v=mCdA4bJAGGk
   <br/>
     The real embodiment of a Jack of all trades, but master of none.
   <br/>
+  
   [<img align="left" alt="LinkedIn Félix" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/>][linkedinfelix]
   [<img align="left" alt="GitHub logo" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg"/>][githubfelix]
+  
   <br/>
 
 </details>
