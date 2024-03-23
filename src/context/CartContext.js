@@ -30,7 +30,13 @@ export const CartProvider = ({ children }) => {
   };
 
   const removeItem = (id) => {
-    const newCart = cart.filter((p) => p.id !== id);
+    const newCart = [];
+    cart.forEach((nestedArray) => {
+      const cleanArray = nestedArray.filter((p) => p.id !== id);
+      if (cleanArray != "") {
+        newCart.push(cleanArray);
+      }
+    });
     setCart(newCart);
   };
 
