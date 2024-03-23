@@ -4,11 +4,12 @@ import { Box } from "@chakra-ui/react";
 
 const CartItemList = ({ productsAdded }) => {
   console.log(productsAdded);
-
   let products = [];
 
-  productsAdded.forEach((i) => {
-    products.push(i);
+  productsAdded.forEach((nestedArray) => {
+    nestedArray.forEach((array) => {
+      products.push(array);
+    });
   });
 
   console.log(products);

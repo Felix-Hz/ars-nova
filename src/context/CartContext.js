@@ -40,8 +40,10 @@ export const CartProvider = ({ children }) => {
 
   const getTotal = () => {
     let total = 0;
-    cart.forEach((prod) => {
-      total += prod.quantity * prod.price;
+    cart.forEach((nestedArray) => {
+      nestedArray.forEach((prod) => {
+        total += prod.quantity * prod.price;
+      });
     });
     return total;
   };
