@@ -5,7 +5,7 @@ export const CartContext = createContext();
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [totalQuantity, setTotalQuantity] = useState(0);
-  console.log(cart);
+  // console.log(cart);
 
   useEffect(() => {
     let totalQuantity = 0;
@@ -20,12 +20,28 @@ export const CartProvider = ({ children }) => {
   }, [cart]);
 
   const isInCart = (id) => {
-    cart.some((p) => p.id === id);
+    let state = false;
+    cart.forEach((nestedArray) => {
+      nestedArray.forEach((array) => {
+        if (array.id === id) {
+          state = true;
+        }
+      });
+    });
+    return state;
   };
 
   const addItem = (addedProduct) => {
-    if (!isInCart(addedProduct.id)) {
+    if (!isInCart(addedProduct[0].id)) {
       setCart([...cart, addedProduct]);
+    } else {
+      cart.forEach((nestedArray) => {
+        nestedArray.forEach((product) => {
+          if (product.id === addedProduct[0].id) {
+            product.quantity += addedProduct[0].quantity;
+          }
+        });
+      });
     }
   };
 
@@ -33,6 +49,7 @@ export const CartProvider = ({ children }) => {
     const newCart = [];
     cart.forEach((nestedArray) => {
       const cleanArray = nestedArray.filter((p) => p.id !== id);
+      // eslint-disable-next-line
       if (cleanArray != "") {
         newCart.push(cleanArray);
       }
