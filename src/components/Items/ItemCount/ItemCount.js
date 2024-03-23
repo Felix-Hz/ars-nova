@@ -23,7 +23,6 @@ const ItemCount = ({ initial, id, price, name, setQuantityAdded }) => {
   };
 
   const handleOnAdd = (quantity) => {
-    console.log(`Se agregaron ${quantity} ${name}`);
     addItem([{ id, name, price, quantity }]);
     setQuantityAdded(quantity);
   };
