@@ -1,0 +1,13 @@
+@import "../../../Pallette.css";
+
+/*--------------------------------------------------------------------------------------- \
+|                                 CART ITEM LIST STYLING                                   |
+\---------------------------------------------------------------------------------------- */
+
+.cart-item-list-container {
+  border-right: solid 1px var(--grey);
+}
+
+.item-list-divider {
+  border: solid 1px var(--grey);
+}

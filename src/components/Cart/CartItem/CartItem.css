@@ -1,0 +1,31 @@
+@import "../../../Pallette.css";
+
+/*----------------------------------------------------------------------------------- \
+|                                 CART ITEM STYLING                                   |
+\----------------------------------------------------------------------------------- */
+
+.cart-item-container {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-container {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-name {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.detail-subtitle {
+  font-weight: bold;
+  display: inline;
+}
+
+.remove-item {
+  align-self: center;
+}
