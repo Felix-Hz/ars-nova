@@ -1,10 +1,10 @@
 import { useState, useContext } from "react";
 import CartContext from "../../context/CartContext";
 import { CartItemList } from "../index";
-
 import { useNavigate } from "react-router-dom";
+import { Box, Button, Heading, Spinner, Text } from "@chakra-ui/react";
 
-import { Box, Button, Heading, Spinner } from "@chakra-ui/react";
+import "./Cart.css";
 
 import {
   collection,
@@ -31,7 +31,7 @@ const Cart = () => {
     });
   });
 
-  console.log(ids);
+  // console.log(ids);
 
   const collectionRef = collection(db, "products");
 
@@ -74,13 +74,22 @@ const Cart = () => {
   };
 
   return (
-    <>
-      <Heading as="h1">Cart</Heading>
-      <CartItemList productsAdded={cart} />
-      <Heading as="h3">Total: ${total}</Heading>
-      <Button onClick={() => clearCart()}>Clear cart</Button>
-      <Button onClick={() => navigateCheckoutForm()}>Go to checkout</Button>
-    </>
+    <Box className="cart-container">
+      <Box className="cart-item-list">
+        <CartItemList productsAdded={cart} />
+      </Box>
+      <Box className="cart-side-checkout">
+        <Text className="price-text">
+          <Text className="price-subtitle">Total:</Text> ${total.toFixed(2)}
+        </Text>
+        <Box className="navigate-checkout-container">
+          <p className="checkout-clear" onClick={() => clearCart()}>
+            Clear cart
+          </p>
+          <Button onClick={() => navigateCheckoutForm()}>Go to checkout</Button>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 
