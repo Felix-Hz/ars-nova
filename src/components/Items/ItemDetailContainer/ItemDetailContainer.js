@@ -16,12 +16,12 @@ const ItemDetailContainer = ({}) => {
     const docRef = doc(db, "products", itemId);
     getDoc(docRef)
       .then((doc) => {
-        console.log(doc);
+        // console.log(doc);
         const productFormatted = { id: doc.id, ...doc.data() };
         setProduct(productFormatted);
       })
       .catch((e) => {
-        console.log(e);
+        // console.log(e);
       })
       .finally(() => {
         setLoading(false);

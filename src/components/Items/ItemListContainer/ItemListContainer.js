@@ -24,7 +24,7 @@ const ItemListContainer = () => {
       : collection(db, "products");
     getDocs(collectionRef)
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         const productsFormatted = res.docs.map((doc) => {
           // the .data() brings every field after id from Firebase
           return { id: doc.id, ...doc.data() };
