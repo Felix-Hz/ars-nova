@@ -51,7 +51,7 @@ const ItemDetail = ({
   rating,
   img,
 }) => {
-  const fakeName = faker.name.findName();
+  const fakeName = faker.name.fullName();
   const [quantityAdded, setQuantityAdded] = useState(0);
 
   return (
