@@ -1,7 +1,15 @@
 import React from "react";
 // import characterImage from "/images/landing.png/";
 import "./Landing.css";
-import { Box, Flex, Heading, Image, Link } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Image,
+  Link,
+  Button,
+  Text,
+} from "@chakra-ui/react";
 
 const Landing = (props) => {
   return (
@@ -22,16 +30,23 @@ const Landing = (props) => {
           {props.greeting}
         </Heading>
         <Heading as="h3" className="subtitle" size="xl" fontWeight="400">
-          {props.subtitle} Click{" "}
+          {props.subtitle} Our{" "}
           <Link
             href="https://www.youtube.com/watch?v=mCdA4bJAGGk"
             fontWeight="600"
             className="rick-astley"
           >
-            here
+            Medieval Fair
           </Link>{" "}
-          to see more.
+          is full with NFTs that you can't miss!
         </Heading>
+        <Box className="btn-explore">
+          <Link href="/shop">
+            <Button p="8" bgColor="#e0ff00">
+              <Text fontSize="xl">Claim yours now!</Text>
+            </Button>
+          </Link>
+        </Box>
       </Box>
       <Image
         src={process.env.PUBLIC_URL + "/images/landing.png"}
