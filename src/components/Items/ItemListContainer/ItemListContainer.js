@@ -24,7 +24,6 @@ const ItemListContainer = () => {
       : collection(db, "products");
     getDocs(collectionRef)
       .then((res) => {
-        // console.log(res);
         const productsFormatted = res.docs.map((doc) => {
           // the .data() brings every field after id from Firebase
           return { id: doc.id, ...doc.data() };
@@ -37,31 +36,6 @@ const ItemListContainer = () => {
       .finally(() => {
         setLoading(false);
       });
-
-    // ASYNCMOCK DDBB =
-    // if (!type) {
-    //   listProducts()
-    //     .then((res) => {
-    //       setProducts(res);
-    //     })
-    //     .catch((e) => {
-    //       console.log(e);
-    //     })
-    //     .finally(() => {
-    //       setLoading(false);
-    //     });
-    // } else {
-    //   productType(type)
-    //     .then((res) => {
-    //       setProducts(res);
-    //     })
-    //     .catch((e) => {
-    //       console.log(e);
-    //     })
-    //     .finally(() => {
-    //       setLoading(false);
-    //     });
-    // }
   }, [type]);
 
   if (loading) {

@@ -66,24 +66,10 @@ const Navbar = () => {
         gap="30px"
         p="10px"
       >
-        {/* <Box className="navbar-explore">
-          <Link to="/count">
-            <Text fontSize="lg" className="explore-text">
-              Count to Infinity
-            </Text>
-          </Link>
-        </Box> */}
-        <Box className="navbar-explore">
-          <Link to="/shop">
-            <Text fontSize="lg" className="explore-text">
-              Explore
-            </Text>
-          </Link>
-        </Box>
         <Box className="navbar-wallet">
-          <Link to="/">
+          <Link to="/shop">
             <Button p="15px" bgColor="#e0ff00">
-              <Text fontSize="md">Connect to Wallet</Text>
+              <Text fontSize="md">Explore</Text>
             </Button>
           </Link>
         </Box>
