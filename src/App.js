@@ -23,6 +23,7 @@ function App() {
       <Router>
         <CartProvider>
           <Box className="App">
+            {/* The FS styling has to be done here */}
             <Navbar />
             <Box className="routes">
               <Routes>
@@ -42,18 +43,18 @@ function App() {
                   path="/category/:type"
                   element={<ItemListContainer />}
                 />
-                <Route
+                {/* <Route
                   exact
                   path="/count"
                   element={<ItemCount initial={1} />}
-                />
+                /> */}
                 <Route
                   exact
                   path="/item/:itemId"
                   element={<ItemDetailContainer />}
                 />
                 <Route exact path="/cart" element={<Cart />} />
-                <Route exact path="/checkout" element={<ContactForm />} />
+                {/* <Route exact path="/checkout" element={<ContactForm />} /> */}
               </Routes>
             </Box>
             <Footer />
