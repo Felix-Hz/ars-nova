@@ -16,7 +16,8 @@ const ItemList = ({ products }) => {
       alignContent="center"
     >
       <LeftNav {...products} />
-      <Grid w='75%' templateColumns="1fr 1fr 1fr 1fr" gap="6px" h="auto">
+      
+      <Grid w='75%' className="list-container" templateColumns="1fr 1fr 1fr 1fr" gap="6px" h="auto">
         {products.map((p) => (
           <GridItem key={p.id} h="auto">
             <Item className="item-card" {...p} />

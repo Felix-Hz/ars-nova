@@ -4,12 +4,13 @@
 |                               LEFT NAV STYLING                                  |
 \-------------------------------------------------------------------------------- */
 
-/* .leftnav-father-container {
-  position: relative;
-} */
+@media (max-width: 900px) {
+  .categories-container {
+    display: none !important;
+  }
 
-/* .leftnav-container {
-  position: absolute;
-  left: -150px;
-  top: 35px;
-} */
+  .leftnav-father-container {
+    width: 85% !important;
+    margin: auto;
+  }
+}

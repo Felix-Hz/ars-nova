@@ -15,7 +15,12 @@ import { Link } from "react-router-dom";
 
 const LeftNav = ({ products }) => {
   return (
-    <Flex direction="column" w="15%" mt='5' className="leftnav-father-container">
+    <Flex
+      direction="column"
+      w="17%"
+      mt="5"
+      className="leftnav-father-container"
+    >
       <Box className="leftnav-container">
         {/* Search bar */}
         <Stack className="searchbar-container" mb="6">
@@ -25,7 +30,7 @@ const LeftNav = ({ products }) => {
               className="searchbar"
               placeholder="The quest for meaning."
               borderRadius="8px"
-              w="520px"
+              w="550px"
               size="md"
               p="7px"
               border="solid 0.1px"
@@ -41,7 +46,7 @@ const LeftNav = ({ products }) => {
         </Stack>
 
         {/* Categories */}
-        <Flex direction="column" gap="8px">
+        <Flex direction="column" className="categories-container" gap="8px">
           <Heading as="h3" size="md">
             Categories
           </Heading>
