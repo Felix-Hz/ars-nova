@@ -4,6 +4,12 @@
 |                        ITEM LIST CONTAINER STYLING                               |
 \-------------------------------------------------------------------------------- */
 
+.shop-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
 .item-list-father-container {
   width: 100%;
   display: flex;

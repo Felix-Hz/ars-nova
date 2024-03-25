@@ -50,7 +50,9 @@ const ItemListContainer = () => {
   }
 
   return (
-    <Box className="item-list-father-container">
+    <Box className="shop-container">
+      <Box className="item-list-father-container"></Box>
+      {/* Products */}
       <ItemList products={products} />
     </Box>
   );

@@ -17,9 +17,6 @@ import { CartWidget } from "../index";
 // ------- CSS --------
 import "./Navbar.css";
 
-// ------- ICONS --------
-import { AiOutlineSearch } from "react-icons/ai";
-
 const Navbar = () => {
   return (
     <Flex
@@ -37,27 +34,6 @@ const Navbar = () => {
           </Link>
         </Heading>
       </Box>
-      <Stack className="searchbar-container">
-        <InputGroup>
-          <Input
-            type="search"
-            className="searchbar"
-            placeholder="The quest for meaning."
-            borderRadius="8px"
-            w="520px"
-            size="md"
-            p="7px"
-            border="solid 0.1px"
-            _focus={{ outline: "none" }}
-            variant="filled"
-          />
-          <InputRightElement
-            children={<AiOutlineSearch className="search-icon" />}
-            top="9px"
-            h="20px"
-          />
-        </InputGroup>
-      </Stack>
       <Flex
         className="navbar-list-container"
         justifyContent="space-between"
