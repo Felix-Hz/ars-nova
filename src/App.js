@@ -5,10 +5,8 @@ import {
   Landing,
   Footer,
   ItemListContainer,
-  ItemCount,
   ItemDetailContainer,
   Cart,
-  ContactForm,
 } from "./components/index";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -22,14 +20,16 @@ function App() {
     <ChakraProvider>
       <Router>
         <CartProvider>
-          <Box className="App">
+          <Box className="app">
             {/* The FS styling has to be done here */}
-            <Navbar />
-            <Box className="routes">
-              <Routes>
+            <Navbar className="footer" />
+
+            <Box className="routes-box">
+              <Routes className="routes">
                 <Route
                   exact
                   path="/"
+                  className="routes"
                   element={
                     <Landing
                       greeting={"Be Welcomed, Foreigner."}
@@ -41,23 +41,25 @@ function App() {
                 <Route
                   exact
                   path="/category/:type"
+                  className="routes"
                   element={<ItemListContainer />}
                 />
-                {/* <Route
-                  exact
-                  path="/count"
-                  element={<ItemCount initial={1} />}
-                /> */}
                 <Route
                   exact
                   path="/item/:itemId"
+                  className="routes"
                   element={<ItemDetailContainer />}
                 />
-                <Route exact path="/cart" element={<Cart />} />
-                {/* <Route exact path="/checkout" element={<ContactForm />} /> */}
+                <Route
+                  exact
+                  path="/cart"
+                  className="routes"
+                  element={<Cart />}
+                />
               </Routes>
             </Box>
-            <Footer />
+
+            <Footer className="footer" />
           </Box>
         </CartProvider>
       </Router>
