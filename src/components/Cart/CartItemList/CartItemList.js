@@ -20,9 +20,9 @@ const CartItemList = ({ productsAdded }) => {
     <Box className="cart-item-list-container">
       {products.map((p, index) => {
         return (
-          <Box key={p.id}>
+          <Box key={p.id} className="box-item-list">
             <CartItem key={p.id} {...p} />
-            {(products.length !== 1 || index !== products.length - 1) && (
+            {products.length !== 1 && index !== products.length - 1 && (
               <Divider className="item-list-divider" />
             )}
           </Box>
