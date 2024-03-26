@@ -4,36 +4,30 @@
 |                               Landing STYLING                                  |
 \-------------------------------------------------------------------------------- */
 
-/* Landing container */
 .landing-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 80px;
-  margin-bottom: 10px;
+  padding: 40px;
 }
 
-/* Greeting text */
 .greeting {
   font-family: "Caudex", serif;
   font-size: 2.25rem;
   margin-bottom: 0.2em;
 }
 
-/* Subtitle text */
 .subtitle {
   font-size: 1.5rem;
   line-height: 1.5;
   max-width: 800px;
 }
 
-/* Link hover effect */
 .rick-astley:hover {
   font-weight: 600;
-  color: #80ff00; /* Adjust the color as needed */
+  color: #80ff00;
 }
 
-/* Explore button */
 .btn-explore {
   margin-top: 1.5em;
 }
@@ -59,7 +53,6 @@
   }
 }
 
-/* Character image */
 .character-image {
   max-height: 650px;
   width: auto;

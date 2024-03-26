@@ -29,3 +29,15 @@
 .remove-item {
   align-self: center;
 }
+
+@media (max-width: 900px) {
+  .cart-item-container {
+    margin: 30px 5px;
+  }
+  .item-container {
+    margin: 5px;
+  }
+  .item-name {
+    font-size: 20px;
+  }
+}

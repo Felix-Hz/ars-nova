@@ -17,8 +17,7 @@ const Landing = (props) => {
       className="landing-container"
       justifyContent="space-around"
       alignItems="center"
-      p="80px"
-      mb="10px"
+      p="70px"
     >
       <Box>
         <Heading

@@ -8,6 +8,20 @@
   border-right: solid 1px var(--grey);
 }
 
+.box-item-list {
+  display: flex;
+  flex-direction: column;
+}
+
 .item-list-divider {
   border: solid 1px var(--grey);
+}
+
+@media (max-width: 900px) {
+  .box-item-list {
+    flex-direction: column;
+  }
+  .cart-item-list-container {
+    border-right: none;
+  }
 }

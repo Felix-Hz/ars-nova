@@ -31,7 +31,6 @@ const Cart = () => {
     });
   });
 
-  // console.log(ids);
 
   const collectionRef = collection(db, "products");
 
@@ -51,7 +50,7 @@ const Cart = () => {
       });
   } else {
     return (
-      <Heading as="h1" p="200px">
+      <Heading as="h1" p="200px" className="empty-cart">
         Oops! It seems that your cart is empty.
       </Heading>
     );
