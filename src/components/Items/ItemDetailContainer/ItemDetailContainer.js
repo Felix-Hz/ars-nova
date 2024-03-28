@@ -1,15 +1,21 @@
-import React, { useState, useEffect } from "react";
+import "./ItemDetailContainer.css";
+import { faker } from "@faker-js/faker";
 import { ItemDetail } from "../../index";
 import { useParams } from "react-router-dom";
-import { db } from "../../../services/firebase/index";
 import { getDoc, doc } from "firebase/firestore";
+import React, { useState, useEffect } from "react";
+import { db } from "../../../services/firebase/index";
 import { Spinner, Box, Heading } from "@chakra-ui/react";
-
-import "./ItemDetailContainer.css";
 
 const ItemDetailContainer = ({}) => {
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [userDetails, setUserDetails] = useState({
+    name: faker.name.fullName(),
+    avatarSrc: faker.internet.avatar(),
+    email: faker.internet.email(),
+    jobType: faker.name.jobType(),
+  });
 
   // returns all url params
   const { itemId } = useParams();
@@ -43,7 +49,7 @@ const ItemDetailContainer = ({}) => {
 
   return (
     <div>
-      <ItemDetail {...product} />
+      <ItemDetail {...product} userDetails={userDetails} />
     </div>
   );
 };
