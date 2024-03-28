@@ -55,30 +55,17 @@ const ItemDetail = ({
   const [quantityAdded, setQuantityAdded] = useState(0);
 
   return (
-    <Box mb="375px" mt="90px" className="item-detail-container-father">
+    <Box className="item-detail-container-father">
       {/* Detail */}
       <Flex
-        justifyContent="space-around"
-        w="75%"
-        m="35px auto 0"
+        justifyContent="space-evenly"
+        w="90%"
         className="item-detail-container"
       >
-        <Stack
-          pt={2.5}
-          align={"center"}
-          height="inherit"
-          w="30%"
-          spacing="6"
-          className="item-details"
-        >
+        <Stack pt={2.5} align={"center"} spacing="6" className="item-details">
           {/* Image */}
-          <Box w="30%" className="image-mobile">
+          <Box className="image-mobile">
             <Image
-              rounded={"xl"}
-              borderRadius="80px"
-              p="10px"
-              objectFit={"scale-down"}
-              marginTop="0"
               src={
                 process.env.PUBLIC_URL + `../../../images/medieval-fair/${img}`
               }
@@ -126,7 +113,7 @@ const ItemDetail = ({
               {category}
             </Text>
           </Box>
-          <Text w="60%" align="center" className="item-details-description">
+          <Text w="80%" align="center" className="item-details-description">
             {description}
           </Text>
           {quantityAdded === 0 ? (
@@ -147,15 +134,8 @@ const ItemDetail = ({
         </Stack>
 
         {/* Image */}
-        <Box w="30%" className="image-desktop">
+        <Box className="image-desktop">
           <Image
-            rounded={"xl"}
-            height="350px"
-            width="310px"
-            borderRadius="80px"
-            p="10px"
-            objectFit={"scale-down"}
-            marginTop="0"
             src={
               process.env.PUBLIC_URL + `../../../images/medieval-fair/${img}`
             }
@@ -163,25 +143,21 @@ const ItemDetail = ({
         </Box>
 
         {/* User */}
-        <Flex
-          justifyContent="space-evenly"
-          w="30%"
-          className="avatar-container"
-        >
-          <Avatar name={userDetails.name} src={userDetails.avatarSrc}></Avatar>
+        <Flex justifyContent="space-evenly" className="avatar-container">
           <Flex direction="column">
             <Flex
               direction="column"
-              gap="10px"
+              gap={1}
               className="avatar-details-container"
             >
+              <Avatar
+                name={userDetails.name}
+                src={userDetails.avatarSrc}
+              ></Avatar>
               <Heading as="h2" size="md">
                 {userDetails.name}
               </Heading>
               <Divider />
-              <Text size="sm" className="avatar-email">
-                {userDetails.email}
-              </Text>
               <Text size="sm" as="em">
                 {userDetails.jobType}
               </Text>

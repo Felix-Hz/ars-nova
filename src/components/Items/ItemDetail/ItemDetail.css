@@ -3,6 +3,32 @@
 /*------------------------------------------------------------------------------------- \
 |                                 ITEM DETAIL STYLING                                   |
 \-------------------------------------------------------------------------------------- */
+.item-detail-container-father {
+  width: 75%;
+  height: 100%;
+  padding: 80px 20px;
+  margin: 50px auto;
+  border: 1px solid var(--grey);
+  border-radius: 35px;
+}
+
+.item-detail-container {
+  padding: 0 40px;
+}
+
+.price-badge {
+  display: flex !important;
+  gap: 3px !important;
+  align-content: center !important;
+  padding: 8px !important;
+  border-radius: 10px;
+}
+
+.image-desktop {
+  height: auto;
+  width: 100%;
+  margin: 0 10px;
+}
 
 .css-lob7a4 {
   display: flex !important;
@@ -16,27 +42,24 @@
   display: none;
 }
 
-@media (max-width: 900px) {
-  .item-detail-container-father {
-    margin: 0 !important;
-  }
+.avatar-container {
+  width: 40%;
+  height: fit-content;
+  border: 1px solid var(--grey);
+  padding: 20px;
+  border-radius: 20px;
+}
 
+@media (max-width: 900px) {
   .item-detail-container {
     flex-direction: column !important;
     align-items: center;
     width: 100%;
+    padding: 0 !important;
   }
 
   .item-details {
     width: 100% !important;
-  }
-
-  .price-badge {
-    display: flex !important;
-    gap: 3px !important;
-    align-content: center !important;
-    padding: 8px !important;
-    border-radius: 10px;
   }
 
   .item-details-description {
@@ -49,7 +72,7 @@
 
   .image-mobile {
     display: block;
-    width: 85% !important;
+    width: 95% !important;
     height: auto;
     margin: 5px !important;
   }
@@ -57,18 +80,9 @@
   .avatar-container {
     width: 90% !important;
     margin: 50px;
-    gap: 10px;
-    justify-content: center !important;
-    border: 1px solid var(--grey);
-    padding: 20px;
-    border-radius: 20px;
   }
 
   .avatar-details-container {
     gap: 5px !important;
-  }
-
-  .avatar-email {
-    display: none;
   }
 }
