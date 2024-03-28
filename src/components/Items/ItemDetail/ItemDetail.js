@@ -9,10 +9,10 @@ import {
   Image,
   Flex,
   Divider,
+  Button,
 } from "@chakra-ui/react";
 import { FaEthereum } from "react-icons/fa";
 import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
-import { faker } from "@faker-js/faker";
 import { ItemCount } from "../../index";
 import "./ItemDetail.css";
 import { Link } from "react-router-dom";
@@ -50,14 +50,41 @@ const ItemDetail = ({
   price,
   rating,
   img,
+  userDetails,
 }) => {
-  const fakeName = faker.name.fullName();
   const [quantityAdded, setQuantityAdded] = useState(0);
 
   return (
-    <Box mb="375px" mt="90px">
-      <Flex justifyContent="space-around" w="75%" m="35px auto 0">
-        <Stack pt={2.5} align={"center"} height="inherit" w="30%" spacing="6">
+    <Box mb="375px" mt="90px" className="item-detail-container-father">
+      {/* Detail */}
+      <Flex
+        justifyContent="space-around"
+        w="75%"
+        m="35px auto 0"
+        className="item-detail-container"
+      >
+        <Stack
+          pt={2.5}
+          align={"center"}
+          height="inherit"
+          w="30%"
+          spacing="6"
+          className="item-details"
+        >
+          {/* Image */}
+          <Box w="30%" className="image-mobile">
+            <Image
+              rounded={"xl"}
+              borderRadius="80px"
+              p="10px"
+              objectFit={"scale-down"}
+              marginTop="0"
+              src={
+                process.env.PUBLIC_URL + `../../../images/medieval-fair/${img}`
+              }
+            />
+          </Box>
+
           <Flex
             gap="10px"
             alignItems="center"
@@ -79,7 +106,7 @@ const ItemDetail = ({
               justifyContent={"space-evenly"}
               alignItems={"center"}
             >
-              <Badge fontWeight={600} fontSize={"md"}>
+              <Badge fontWeight={600} fontSize={"md"} className="price-badge">
                 {price}
                 <FaEthereum
                   style={{ marginTop: "0 !important", padding: "0" }}
@@ -99,7 +126,7 @@ const ItemDetail = ({
               {category}
             </Text>
           </Box>
-          <Text w="60%" align="center">
+          <Text w="60%" align="center" className="item-details-description">
             {description}
           </Text>
           {quantityAdded === 0 ? (
@@ -111,10 +138,16 @@ const ItemDetail = ({
               setQuantityAdded={setQuantityAdded}
             />
           ) : (
-            <Link to="/cart"> Terminar compra </Link>
+            <Link to="/cart">
+              <Button size="sm" bgColor="#e0ff00" m="8">
+                Terminar compra
+              </Button>
+            </Link>
           )}
         </Stack>
-        <Box w="30%">
+
+        {/* Image */}
+        <Box w="30%" className="image-desktop">
           <Image
             rounded={"xl"}
             height="350px"
@@ -128,20 +161,29 @@ const ItemDetail = ({
             }
           />
         </Box>
-        <Flex justifyContent="space-evenly" w="30%">
-          <Avatar
-            name={fakeName}
-            src={faker.internet.avatar(fakeName)}
-          ></Avatar>
+
+        {/* User */}
+        <Flex
+          justifyContent="space-evenly"
+          w="30%"
+          className="avatar-container"
+        >
+          <Avatar name={userDetails.name} src={userDetails.avatarSrc}></Avatar>
           <Flex direction="column">
-            <Flex direction="column" gap="10px">
+            <Flex
+              direction="column"
+              gap="10px"
+              className="avatar-details-container"
+            >
               <Heading as="h2" size="md">
-                {fakeName}
+                {userDetails.name}
               </Heading>
               <Divider />
-              <Text size="sm">{faker.internet.email(fakeName)}</Text>
+              <Text size="sm" className="avatar-email">
+                {userDetails.email}
+              </Text>
               <Text size="sm" as="em">
-                {faker.name.jobType()}
+                {userDetails.jobType}
               </Text>
             </Flex>
           </Flex>
