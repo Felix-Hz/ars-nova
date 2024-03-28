@@ -5,6 +5,8 @@ import { db } from "../../../services/firebase/index";
 import { getDoc, doc } from "firebase/firestore";
 import { Spinner, Box, Heading } from "@chakra-ui/react";
 
+import "./ItemDetailContainer.css";
+
 const ItemDetailContainer = ({}) => {
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -30,7 +32,7 @@ const ItemDetailContainer = ({}) => {
 
   if (loading) {
     return (
-      <Box p="370px" textAlign="center">
+      <Box p="370px" textAlign="center" className="spinner-item-detail">
         <Spinner thickness="5px" speed="0.65s" size="xl" marginBottom="20px" />
         <Heading as="h2" size="md">
           Loading

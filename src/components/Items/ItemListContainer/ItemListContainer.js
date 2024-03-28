@@ -40,7 +40,7 @@ const ItemListContainer = () => {
 
   if (loading) {
     return (
-      <Box p="370px" textAlign="center">
+      <Box p="370px" textAlign="center" className="spinner-item-list">
         <Spinner thickness="5px" speed="0.65s" size="xl" marginBottom="20px" />
         <Heading as="h2" size="md">
           Loading
